@@ -1,0 +1,13 @@
+body {
+    background: rgb(52, 100, 80);
+    justify-content: center;
+    min-height: 88vh;
+    font-size: 22px;
+    text-align: center;
+    color: aliceblue;
+}
+p {
+    margin-right: 100px;      /* Small space at the top */
+    margin-left: 100px;   /* Small space at the bottom */
+    padding: 0 10px;      /* Horizontal padding only */
+}
