@@ -1,2 +1,2 @@
 # JS00
- javascript practice
+ javascript basics practice >>
