@@ -106,20 +106,19 @@ NaN                                                                   */
 
 // ! ?????????????????????????????????????????????????????????????????????????????????????????????????????????????
 
-// console.log('helllo mother fuckers by pressing alt and show curser');
-// console.log('helllo mother fuckers by pressing alt and show curser');
-// console.log('helllo mother fuckers by pressing alt and show curser');
-// console.log('helllo mother fuckers by pressing alt and show curser');
-// console.log('helllo mother fuckers by pressing alt and show curser');
+// console.log('Hello WORLD by pressing alt and show curser');
+// console.log('Hello WORLD by pressing alt and show curser');
+// console.log('Hello WORLD by pressing alt and show curser');
+// console.log('Hello WORLD by pressing alt and show curser');
+// console.log('Hello WORLD by pressing alt and show curser');
 
+//?  selecting multi lines and pressing ( ctrl + / )
 /*
-    TODO: press ( alt + up or down key ) to move the line up or down
-    
-    TODO: press ( alt + shift + up or down key ) to copy the line 
+    *>  press ( alt + up or down key ) to move the line up or down  
+    *>  press ( alt + shift + up or down key ) to copy the line 
     
 */
 
-   //  selecting multi lines and pressing ( ctrl + / )
 
 // TODO:        function conxept which gives output    
 
@@ -316,27 +315,32 @@ NaN                                                                   */
 // TODO: simple for loop
 
 // * one simple loop example
-// let rows = 5;               // Number of rows you want to print
-// for (let i = 1; i <= rows; i++)         // Outer loop controls the number of lines
+
+// let rows = 5;                          // Number of rows you want to print
+// for (let i = 1; i <= rows; i++)        // Outer loop controls the number of lines
 // {
-    //     let stars = '';         // Initialize an empty string for each line
-    
-    //         for (let j = 1; j <= i; j++)      // Inner loop controls the number of stars on each line 
-    //         {
-        //             stars += '*';             // Add a star for each iteration of the inner loop
-        //         }
-        //     console.log(stars);        // Print the stars for the current line
-        // }
+//         let stars = '';                // Initialize an empty string for each line 
+        
+//         //? add stars to the string for each iteration of the outer loop
+//         for (let j = 1; j <= i; j++)      // Inner loop controls the number of stars on each line 
+//         {
+//                 stars += '*';             // Add a star for each iteration of the inner loop
+//         }
+//         console.log(stars);               // Print the stars for the current line
+// }
 
 // * for loop on array example 
+
 // var myArray = ["Punjab", 88 , "K.P.K", "Balochistan", "Sindh", 1947 ];
 // for(let i = 0 ; i < myArray.length ; i++)
 // {
-// if(typeof myArray[i] !== "string") continue;                                    /*
-// ? typeof myArray[i] returns a string that describes the type of this element. For example, it could return "string", "number", "object", etc., depending on the element’s type,
-// ! If myArray[i] is not a string, then typeof myArray[i] !== "string" evaluates to true, 
-// ? When continue is executed, the code below it within the loop is skipped for that iteration.          */
-// console.log(myArray[i]);
+//     if(typeof myArray[i] !== "string") continue;                                    
+
+//    //? typeof myArray[i] returns a string that describes the type of this element. For example, it could return "string", "number", "object", etc., depending on the element’s type,
+//    //! If myArray[i] is not a string, then typeof myArray[i] !== "string" evaluates to true, 
+//    //? When continue is executed, the code below it within the loop is skipped for that iteration.         
+
+//     console.log(myArray[i]);
 // }
 
 // TODO: simpler for each loop used for arrays  (it is more of a method on array) 
@@ -410,87 +414,101 @@ NaN                                                                   */
 // // console.log(object2);
 // // object2.getCourseCount();
 
-
+//* >>>>>>>>      continued ...
 // TODO: prototype conxept
 // ? to make a function of the object (outside of the object), we use prototype keyword
 
-// User.prototype.getFirstName = function (){
-    //     console.log(`Your first name is ${this.firstName}`);
-    // }
-    
-    // // ? hasOwnProperty() explained
-    // if(object2.hasOwnProperty("firstName"))   // hasOwnProperty is available in prototype of the object and it will return true or false + //? this is more sophisticated way
-    //     {
-        //     object2.getFirstName();   // gets the first name of object2 by first checking if it exists or not
-        //     };
-        // object1.getFirstName();     // gets the first name of object1 bluntly
-        
-        // var object3 = new User("Barbosa" , 8)
-        // // console.log(object3);
-        // object3.getFirstName();     // gets the first name of object3
-        // object3.getCourseCount();
-        
-// TODO: objects from MDN conxept
+// User.prototype.getFirstName = function ()
+//     {
+//         console.log(`Your first name is ${this.firstName}`);
+//     }
+
+// ? hasOwnProperty() explained
+
+// if(object2.hasOwnProperty("firstName"))   // hasOwnProperty is available in prototype of the object and it will return true or false + //? this is more sophisticated way
+//     {
+//     object2.getFirstName();   // gets the first name of object2 by first checking if it exists or not "Will"
+//     };
+
+// object1.getFirstName();     // gets the first name of object1 bluntly "Jack"
+
+// var object3 = new User("Barbosa" , 8)
+// console.log(object3);       // dumps the whole object3 with the new values assigned
+// object3.getFirstName();     // gets the first name of object3
+// object3.getCourseCount();       // gets the course count of object3
+
+// TODO: object.create from MDN conxept
 //? creating a proto or a class which defines how every object will be created
 
 // var User = {
-    //     name: "",
-    //     getUsername: function () {
-        //         console.log(`the user name is ${this.name}`);
-        //     },
-        // };
-        // var Jacky = Object.create(User);
-        // console.log(Jacky);   // here the object is created but the values are not assigned and it will give different results on browser which is "__proto__"
-        // Jacky.getUsername(); // this will give empty rusult in name place
-        // Jacky.name = "Jack Sparrow";
-        // Jacky.getUsername();
-        
-        // //? not so liked way
-        // var Barbosa = Object.create(User, {
-            //     name: {value: "Hector Barbossa"}, 
-            //     role: {value: "Captain"}, 
-            // });
-            // Barbosa.getUsername();
-            
+//             name: "",
+//             getUsername: function () 
+//                 {
+//                     console.log(`the user name is ${this.name}`);
+//                 },
+//             };
+
+// var Jacky = Object.create(User);
+// // console.log(Jacky);   // here the object is created but the values are not assigned and it will give different results on browser which is "__proto__"
+// // Jacky.getUsername(); // this will give empty rusult in name place
+// Jacky.name = "Jack Sparrow";
+// Jacky.getUsername();
+
+//? not so liked way because values need to be initialized in the {}
+// var Barbosa = Object.create(User, {          name: {value: "Hector Barbossa"}, 
+//                                             role: {value: "Captain"},     // here new property added to the object
+//                                     });
+
+// Barbosa.getUsername();
+// var roly = Barbosa.role; // this will pass the role of Barbosa to a variable 'roly'
+// console.log(roly); // this will give the role of Barbosa
+
 // TODO: Self Anonymous Executing function or IIFE Immediatly Invoked Function Expression
 
 // (function (){
-//     console.log(`your name is Jack Sparrow?`);
-//     console.log(`Its Captain Jack Sparrow.`);
+//     console.log(`Q.>>  your name is Jack Sparrow?`);
+//     console.log(`A.>>  Its Captain Jack Sparrow.`);
 // }
 // )();
 
 // TODO: Lexical Scoping  + a little touch to Closure
 
-// function init () {
+// function init () 
+//     {
 //     var Name = "Jack";   // this name will only be available as far as the context of the function
-//     function sayName(){
+//     function sayName()
+//         {      
 //         console.log(Name);
-//     }
+//         }
 //     sayName();   // here the function in the function is called and hence it goes away after the execution
-// }
+//     }
 // init();
 
 // TODO:  Closure + Design Decisions of Redux("A JS library for predictable and maintainable global state management") which is Javascript state management library (also in React and Angular)
 
 //?! one example
 
-// function init () {
+// function init ()
+// {
 //     var Name = "Jack";   // this name will only be available as far as the context of the function //? 'Name' is scoped to 'init'
 //     console.log("i am init");
-//     function sayName(){
+//     function sayName()
+//         {
 //         console.log(Name);
-//     }
+//         }
 //     return sayName;   // here the function is passed as a reference and is not called right away hence it will not leave the memory  //? returns a reference to 'sayName', without invoking it
 // }
 
 // console.log("Calling init for the first time");
 // var value = init();  // 'init()' is called here, which outputs "i am init"
+// value();  // This will output "Jack", here we are using the returned reference of 'sayName' to call it with 'value()'
 
 //?! second example
 
-// function doAdd(x){
-//     return function(y){
+// function doAdd(x)
+// {
+//     return function(y)    // y is the second argument passed to doAdd() function, inner function which is returned from doAdd() function
+//     {
 //         return x+y;
 //     }
 // }
@@ -531,16 +549,16 @@ NaN                                                                   */
 // var infoOfSecondObject = firstPirate.getInfo.bind(secondPirate);
 // infoOfSecondObject();        // or we can call like this
 
-// // ? call just calls the function right away
+// ? call just calls the function right away
 // firstPirate.getInfo.call(secondPirate); 
 
 // TODO:   strings in JavaScript
 
-// // one way
+//? one way
 // var string1 = "Jack\'s Black Pearl from string 1";       // single quotes can be used for strings containing single quotes, double quotes and backslashes, and vice versa.  This is called escaping.
 // // console.log(string1);
 
-// // other way 
+//? other way 
 // var string2 = 'Jack\'s Black Pearl from string 2';    
 // // console.log(string2);
 
@@ -570,11 +588,11 @@ NaN                                                                   */
 
 // for (const key of myMaps.keys())   // for of loop is used to iterate over the keys
 //     {
-    //     console.log(`key is ${key}`);
-    //     }
-    
-    // for (let value of myMaps.values())   // for of loop is used to iterate over the values
-    //     {
+//         console.log(`key is ${key}`);
+//     }
+
+//     for (let value of myMaps.values())   // for of loop is used to iterate over the values
+//     {
 //     console.log(`value is ${value}`);
 //     }
 
@@ -644,14 +662,14 @@ NaN                                                                   */
 // function addMultipleNumbers(...args) // args is an array of all the arguments passed to the function
 // {
 //     console.log(args); // this will print all the arguments passed to the function as an array. This is an example of rest operator. //? The rest operator is used to capture all the remaining arguments into an array.
-    
+
 //     let sum = 0;
 //     for (const iterator of args) 
 //         {
 //             // sum = sum + iterator;
 //             sum += iterator;   // or this is also valid
 //         }
-//         return sum;
+//     return sum;
 // } 
 
 // console.log(addMultipleNumbers(2, 5, 8, 10));
@@ -660,7 +678,7 @@ NaN                                                                   */
 // function addMultipleNumbers(a, b, ...args) // this will treat first two arguments seperately as a and b and the rest of the arguments as an array.
 // {
 //     console.log(args);    // This is an example of rest operator. //? this will print all the arguments passed to the function as an array except a and b. 
-    
+
 //     let multiply = a * b;
 //     let sum = 0;
 //     for (const iterator of args) 
@@ -673,17 +691,12 @@ NaN                                                                   */
 
 // console.log(addMultipleNumbers(2, 5, 1, 1));
 
-// TODO:  ?????? in JavaScript
 
 
 
 
+//!..............................................
 
-
-
-
-
-// //!..............................................
 //   *   TODO:
 //   ?   FIXME:
 //   !   
