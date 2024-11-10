@@ -691,6 +691,66 @@ NaN                                                                   */
 
 // console.log(addMultipleNumbers(2, 5, 1, 1));
 
+// TODO: Event loop 
+
+// const uno = () => {
+//     console.log('I am Uno');
+// }
+
+// const dos = () => {
+//     setTimeout( () => {  //? this could be an AJAX request, database call, or any other asynchronous operation
+//         console.log("I am late message");
+//         }, 3000);
+//     console.log('I am Dos');
+//     }
+
+// const tres = () => {
+//     console.log('I am Tres');
+//     }
+
+// uno();
+// dos();  
+// tres();
+
+// TODO: Promises Async and Await
+
+// const uno = () => {
+//     return "I am Uno";
+// };
+
+// // const dos = () => {    //? this will return a undefined because it is not awaited
+// //     setTimeout( () => {  
+// //         return "I am two message"; ;
+// //         }, 3000);
+// //     };
+
+// const dos = async () => {
+//     return new Promise((resolve, reject) => {   //? this will return a promise, both resolve and reject are used to handle the success and failure of the promise.
+//         setTimeout( () => {  
+//                     resolve ( "I am two message"); //? resolve is used to resolve the promise
+//                     }, 2000);
+//     });
+// };
+
+// const tres = () => {
+//     return "I am three";
+//     };
+
+// const callMe = async () => {   //? async function is used to make the function return a promise.
+//     let valOne = uno();
+//     console.log(valOne);
+
+//     let valTwo = await dos();   //? await keyword is used to wait for the promise to resolve.
+//     console.log(valTwo);
+
+//     let valThree = tres();
+//     console.log(valThree);
+// };
+
+// callMe();
+
+
+
 
 //!..............................................
 
