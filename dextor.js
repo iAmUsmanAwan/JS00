@@ -645,6 +645,15 @@ NaN                                                                   */
 // console.log(string3.includes("Pearl"));
 // console.log(string3.toLocaleUpperCase());
 
+// TODO:  Replace and ReplaceAll in string  
+//*      >>>>>>>>     the one used in 3 idiot movie
+
+// const str = "Do Yahoo people really love Yahoo?";
+// // const newstr = str.replace("Yahoo", "Google"); // this will replace first occurrences of "Yahoo" with "Google"
+// const newstr = str.replaceAll("Yahoo", "Google"); // this will replace all occurrences of "Yahoo" with "Google"
+// console.log(newstr);
+
+
 // TODO:  Maps in JavaScript
 //? they are similar to objects but with additional features and are not objects
 
@@ -819,6 +828,35 @@ NaN                                                                   */
 
 // callMe();
 
+// TODO: Promise .any()  and  .race() example
+
+// const rejectMe = new Promise((_, reject) => reject("path issue"));
+// const resolveMe = new Promise(resolve => resolve());
+
+// //* promise.any(promises)  
+// //? if any promise resolves, it resolves the promise.all(promises) waits for all promises to resolve.
+// Promise.any([rejectMe, resolveMe, rejectMe])
+// .then(() => console.log("All promises resolved"))
+// .catch(e => console.log("Rejected"));
+
+// //* promise.race(promises) 
+// Promise.race([rejectMe, resolveMe, rejectMe])
+// .then(() => console.log("All promises resolved"))
+// .catch(e => console.log("Rejected"));
+
+// TODO: Logical Assignment Operators
+
+// function cartTotal(value) {
+//     value ??= 0; //? Logical Assignment Operator. If value is undefined or null, it will be set to 0.
+//     console.log(`Current cart total: $${value}`);
+// }
+// cartTotal();
+// cartTotal(10);
+
+// TODO: Numerical Separators
+
+// var longNumber = 1_23_45_67_890;  //? underscore is used as a numerical separator. it will be ignored by JavaScript while printing.
+// console.log(longNumber);
 
 
 
