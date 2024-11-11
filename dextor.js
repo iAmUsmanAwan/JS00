@@ -149,22 +149,92 @@ NaN                                                                   */
 //         return number % 2 === 0 ;
 // }
     
-    //! //       ? one example
-    // console.log(isEven(3));
+//! //       ? first example:
+// console.log(isEven(3));
     
-    //! //       ? another example
-    // var result = [2 , 4 , 6 , 8].every(isEven); // here the function is referenced to a array and checks every element of the array
-    // console.log(result);
+//! //       ? second example:
+// var result = [2 , 4 , 6 , 8].every(isEven); // here the function is referenced to a array and checks every element of the array
+// console.log(result);
+
+//?  Arrow function
+// var result = [2, 4, 6, 8].every((e) => {
+//         return e % 2 === 0;
+//     })
+// console.log(result);
+
+// //?  Arrow function can also be used without return keyword and curly brackets are also excluded
+// var result = [2, 4, 6, 8].every((e) =>  e % 2 === 0 )
+// console.log(result);
+
+//! // third example which shows the difference between callback and regular function:
+
+// function greet(name) {
+//     console.log("Hello, " + name + "!");
+//     }
+
+// function processUserInput(callback) {
+//     const name = "Alice";
+//     callback(name);
+//     }
+
+// processUserInput(greet);  // Output: Hello, Alice!        
+// //? greet is a callback function because it's passed as an argument to processUserInput.
+// //* processUserInput calls greet later, using the name parameter.
+
+//! fourth example which shows how regular functions handle this keyword: 
+//? gives an error in strict mode because it tries to access a non-existent property of the global object (this)
+
+// function Person() {
+//     this.age = 0;
     
-    // ?  Arrow function
-    // var result = [2, 4, 6, 8].every((e) => {
-    //     return e % 2 === 0;
-    // })
-    // console.log(result);
+//     setInterval(function() {
+//         this.age++; // `this` here refers to the global object, not Person
+//         console.log(this.age);  // NaN or unexpected behavior in strict mode
+//     }, 1000);
+// }
+
+// const p = new Person();
+
+//! fifth example which shows how arrow functions handle this keyword:
+
+// function Person() {
+//     this.age = 0;
     
-    // ?  Arrow function can also be used without return keyword and curly brackets are also excluded
-    // var result = [2, 4, 6, 8].every((e) =>  e % 2 === 0 )
-    // console.log(result);
+//     const intervalId = setInterval(() => {
+//         if (this.age < 30) {         // Condition: Only increment if age is less than 10
+//             this.age++;
+//             console.log(this.age);
+//         } else {
+//             clearInterval(intervalId); //? clearInterval() is a built-in JavaScript function that stops a timer set by the setInterval() function. And intervalId is the identifier returned by setInterval() when it was initially called. It's used here to specify which interval should be stopped.  // Stop the interval once age reaches 10
+//             console.log("Age limit reached. Age is :", this.age);
+//         }
+//     }, 100);
+// }
+// const p = new Person();
+
+//! sixth example which shows Example of Callback Function with Regular Function:
+
+// function displayData(data) {
+//     console.log(data);
+// }
+
+// function fetchData(callback) {
+//     setTimeout(function() {
+//         callback("Data received!"); // displayData(data) function 
+//     }, 1000); // this is the delay in milliseconds which is 1 second
+// }
+
+// fetchData(displayData);  // Output after 1 second: Data received!
+
+//! seventh example which shows Example of Callback Function with Arrow Function:
+
+// function fetchData(callback) {
+//     setTimeout(() => {
+//         callback("Data received!");
+//     }, 1000);
+// }
+
+// fetchData(data => console.log(data));  // Output after 1 second: Data received!
 
 // TODO:          function conxept with global context 
 

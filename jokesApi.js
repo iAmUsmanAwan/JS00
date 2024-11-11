@@ -5,6 +5,8 @@ fetch(`https://api.chucknorris.io/jokes/random`)
     return responseGot.json();
 }) 
 .then((dataGotFromFirstThen) => {  //? if the promise from the first then is resolved
+    console.log("Data is :" ,  dataGotFromFirstThen);
+    
     var Joke = dataGotFromFirstThen.value;
     console.log("Joke fetched : ", Joke);    
 })
