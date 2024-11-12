@@ -858,6 +858,25 @@ NaN                                                                   */
 // var longNumber = 1_23_45_67_890;  //? underscore is used as a numerical separator. it will be ignored by JavaScript while printing.
 // console.log(longNumber);
 
+// TODO: Quirky Behaviour of javascript
+//* The behavior of JavaScript should be handled carefully.
+
+// const student = { 
+//     age: 25, 
+//     name: {
+//         firstName: "John",
+//         lastName: "Wick",
+//     }, 
+// };
+
+// student.age = 18;
+// console.log(student);
+// Object.freeze(student); //? freezes the object and its properties.
+// student.age = 33;
+// console.log(student);
+// student.name.firstName = "Jonathan";
+// console.log(student);
+
 
 
 //!..............................................
