@@ -1,7 +1,7 @@
 //* newer syntax for importing classes from separate files
 // import User from "./classes";
 
-const User = require("./classes");
+const User = require("./classes");    //? require method is used to import classes from separate files
 
 //? create a new user object
 const User1 = new User("John Wick", "mr.wick@gmail.com");
