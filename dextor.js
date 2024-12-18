@@ -622,17 +622,18 @@ NaN                                                                   */
 // ? call just calls the function right away
 // firstPirate.getInfo.call(secondPirate); 
 
-// TODO:   strings in JavaScript
+// TODO:     strings in JavaScript
+//* Escaping characters  
 
 //? one way
-// var string1 = "Jack\'s Black Pearl from string 1";       // single quotes can be used for strings containing single quotes, double quotes and backslashes, and vice versa.  This is called escaping.
+// var string1 = "The Jack whispered, \n \"Why Fight \t  When You can Negotiate?.\""       // single quotes can be used for strings containing single quotes, double quotes and backslashes, and vice versa.  This is called escaping. here \n adds a new line and \t adds a tab distance.
 // // console.log(string1);
 
 //? other way 
 // var string2 = 'Jack\'s Black Pearl from string 2';    
 // // console.log(string2);
 
-// var string3 = `Jack's Black Pearl from string 3`;      // backticks are used for multiline strings and template literals are used for string interpolation and best practice for string manipulation 
+// var string3 = `Captain Jack Sparrow's Black Pearl`;      // backticks are used for multiline strings and template literals are used for string interpolation and best practice for string manipulation 
 // // console.log(string3);
 
 // var name = "Jack";
@@ -644,6 +645,34 @@ NaN                                                                   */
 // console.log(string3.endsWith('3'));
 // console.log(string3.includes("Pearl"));
 // console.log(string3.toLocaleUpperCase());
+
+// var string4 = "The file located at \"C:\\\\Desktop\\My Documents\\Roster\\names.txt\" contains the names on the roster."
+
+// console.log(string4)
+
+
+// TODO:     strings in JavaScript
+//* ASCI values of the alphabets 
+//? ASCII value of 'a' is 97, ASCII value of 'b' is 98, ASCII value of 'c' is 99, ASCII value of 'd' is 100, and so on.
+
+// // Pick a string. Your string can have any number of characters.
+// var my_string = "x";    // 120 
+
+// // Calculate the ASCII value of the first character, i.e. the character at the position 0. 
+// var ASCII_value = my_string.charCodeAt(0);
+
+// // Let us print
+// console.log(ASCII_value);
+
+//? Printing ASCII values of all the characters in your string 
+
+// var my_string = "Mana";     // different from MANA 
+
+// // Iterate using a Loop
+// for (var i = 0; i < my_string.length; i++) {
+//     console.log(my_string.charCodeAt(i));
+// }
+
 
 // TODO:  Replace and ReplaceAll in string  
 //*      >>>>>>>>     the one used in 3 idiot movie
@@ -876,6 +905,42 @@ NaN                                                                   */
 // console.log(student);
 // student.name.firstName = "Jonathan";
 // console.log(student);
+
+// TODO: Adding a random cat picture on the browser by writing a line of code in the inspect section of the browser
+
+// document.body.addEventListener('click', function () {
+//     var myParent = document.getElementsByTagName("h1")[0]; 
+//     var myImage = document.createElement("img");
+//     myImage.src = 'https://thecatapi.com/api/images/get?format=src&type=gif';
+//     myParent.appendChild(myImage);
+//     myImage.style.marginLeft = "160px";
+// });
+
+// TODO:  A function to reverse the order of characters in a word
+
+// function reverseTheWord(word) {     // word is parameter passed to the function 
+//     var reversedWord = "";       // initially set to empty string
+//     console.log(word);      // return the original word
+    
+//     //? looop over the characters in reverse order
+//     for (var i = word.length - 1; i >= 0; i--) {
+        
+//         //? adds characters to a new word
+//         reversedWord = reversedWord.concat(word[i]);
+//         // reversedWord = "" + "o" = "o"
+//         // reversedWord = "o" + "l" = "ol"
+//         // reversedWord = "ol" + "l" = "oll"
+//         // reversedWord = "oll" + "e" = "olle"
+//         // reversedWord = "olle" + "H" = "olleH"
+//     }
+//     console.log(reversedWord);   // return the reversed word
+
+//     return reversedWord;    
+// }
+// reverseTheWord("Hello World");
+
+// TODO: 
+
 
 
 
