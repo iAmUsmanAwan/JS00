@@ -67,7 +67,7 @@ const theDictator = 'Admiral General Aladin';
 
 /*               TODO:     also       FIXME:          +  Multi line comment
 
-! falsy values
+! falsy values    {important for interview part}
 ?they will always be considered as false which is a boolean expression
 
 undefined
@@ -699,21 +699,21 @@ NaN                                                                   */
 //         console.log(`key is ${key}`);
 //     }
 
-//     for (let value of myMaps.values())   // for of loop is used to iterate over the values
-//     {
-//     console.log(`value is ${value}`);
-//     }
+// for (let value of myMaps.values())   //? for of loop is used to iterate over the values
+// {
+// console.log(`value is ${value}`);
+// }
 
-// for (const [key, value] of myMaps)   // for of loop is best used to iterate over the key-value pairs for the map , and for of loop is gonna always return key first
+// for (const [key, value] of myMaps)   //? for of loop is best used to iterate over the key-value pairs for the map , and for of loop is gonna always return key first
 //     {
 //     console.log(`key is ${key}, and value is ${value}`);
 //     }
 
-// myMaps.forEach((key) => console.log(`${key}`));   // this will print all values of the map because forEach loop thinks that we will be doing something with the values not the indexes
+// myMaps.forEach((key) => console.log(`${key}`));   //? this will print all values of the map because forEach loop thinks that we will be doing something with the values not the indexes
 
-// myMaps.forEach((value) => console.log(`${value}`));  // this will also print all values of the map 
+// myMaps.forEach((value) => console.log(`${value}`));  //? this will also print all values of the map 
 
-// myMaps.forEach((v, k) => console.log(`key is ${k} and, value is ${v}`));  // for each is always gonna return the value first
+// myMaps.forEach((v, k) => console.log(`key is ${k} and, value is ${v}`));  //? for each is always gonna return the value first
 
 // myMaps.delete("key2");
 // console.log(myMaps);
@@ -939,9 +939,176 @@ NaN                                                                   */
 // }
 // reverseTheWord("Hello World");
 
-// TODO: 
+// TODO: Interview Questions Practice (Logical)
+//* ⚪🟢🔵🟡
+
+//! Falsy values
+//? They will always be considered as false which is a boolean expression.
+// undefined
+// null
+// ""
+// 0
+// ''
+// NaN
+
+// console.log("">-1);  // true
+//? because if we convert empty string to a value it is 0
+
+// console.log(!!""); // False
+//? here first ! changed the false value to true, but the second ! then again changed the true to false 
+
+// console.log(!!"0"); // True
+//? here the first ! negates the value, converting the truthy value into false, but the second ! negates it again, flipping it back to true
+
+// console.log(""==true); // False
+//? because empty string is a falsy value
+
+// console.log("greater">"elephant");
+//? The first characters of the strings are compared: "g" (from "greater") and "e" (from "elephant"). Since 103 > 101, "g" is greater than "e", and the entire comparison stops here without looking at the rest of the characters.
+
+// console.log(![] + []) // False
+//? In JavaScript, [] (an empty array) is considered a truthy value. The ! (logical NOT) operator negates the truthiness of its operand. So, ![] becomes false. The + operator here performs type coercion, as one operand ([]) is not a number. When an empty array ([]) is involved in string concatenation, it is coerced into an empty string (""). So, false + [] is equivalent to "false" + "". Result: "false" , and the type of this is string
+
+// console.log([] + []);    //? ""
+// console.log(![]);        //? false
+// console.log(![] + []);   //? "false"
+// console.log(true + []);  //? "true"
 
 
+//! forEach
+//* Purpose: Iterates through each element of the array and executes a callback function for each element.
+//* Returns: undefined or the result of callback against each value (does not return a new array).
+//* Use Case: When you need to perform side effects like logging, updating variables, or interacting with external systems.
+
+// const arr = [1, 2, 3];
+// arr.forEach(num => console.log(num * 2)); //? Logs: 2, 4, 6
+// console.log(arr); //? [1, 2, 3] - Original array remains unchanged
+
+//* Another Example
+
+// let a = [1, 2, 3, 4];
+// a.forEach((num)=> {
+//     num++;
+//     console.log(num);
+// })
+
+
+//! map
+//* Purpose: Iterates through each element of the array, applies a transformation via a callback function, and returns a new array containing the results.
+//* Returns: A new array with the transformed elements.
+//* Use Case: When you want to create a new array by transforming the elements of an existing array.
+
+// const arr = [1, 2, 3];
+// const doubled = arr.map(num => num * 2); //? new array is formed [2, 4, 6]
+// console.log(arr); //? [1, 2, 3] - Original array remains unchanged
+// console.log(doubled); //? [2, 4, 6]
+
+//* Another Example
+
+// let a = [1, 2, 3, 4];
+// let b = a.map(num => num > 2);
+// console.log(b); //? [ false, false, true, true ] - Original array remains unchanged
+
+
+//! object of objects
+//* An object of objects in JavaScript refers to an object where the values are themselves objects. This structure allows us to create hierarchical or nested data models, where we can organize and access data in a meaningful way.
+
+// let a = {}
+// let b = {key: "b"}
+// let c = {key: "c"}
+// a[b] = 100;
+// a[c] = 200;
+
+// console.log(a); //? { [object Object]: 200 } - The key is an object (b), and the value is 200
+
+//* Another Example
+
+// const users = {   //? here, there is a object inside a object
+//         user1: {
+//             id: 1,
+//             name: "Alice",
+//             age: 25,
+//         },
+//         user2: {
+//             id: 2,
+//             name: "Bob",
+//             age: 30,
+//         },
+//         user3: {
+//             id: 3,
+//             name: "Charlie",
+//             age: 35,
+//         },
+//     };
+    
+// console.log(users);
+// console.log(users.user1.name); // Output: Alice
+// console.log(users.user3.age);  // Output: 35
+    
+//? You can access the inner objects and their properties using dot notation (.) or bracket notation ([]).
+// console.log(users["user1"]["name"]); // Output: Alice
+// console.log(users["user3"]["age"]);  // Output: 35
+
+//* Iterating Over an Object of Objects
+
+//? Using for...in
+// for (let key in users) {
+//     console.log(`The key is ${key}:`, users[key]);
+//     // console.log(`${key}:`, users[key]);  //? or this
+//     }
+
+//? Using Object.keys()
+// Object.keys(users).forEach((key) => {
+//     console.log(`${key}:`, users[key]);
+//     });
+
+
+//? Using Object.entries()
+// Object.entries(users).forEach(([key, value]) => {
+//     console.log(`${key}:`, value);
+//     });
+
+//* Modifying an Object of Objects
+
+// users.user1.age = 26; // Update age for user1
+// users.user4 = { id: 4, name: "David", age: 40 }; // Add a new user
+// console.log(users);
+
+//* Another Example with Deeper Nesting
+
+// const organization = {
+//     department1: {
+//         manager: "Alice",
+//         employees: {
+//             emp1: { name: "Bob", role: "Developer" },
+//             emp2: { name: "Charlie", role: "Designer" },
+//         },
+//         },
+//         department2: {
+//             manager: "David",
+//             employees: {
+//                 emp3: { name: "Eve", role: "Analyst" },
+//                 emp4: { name: "Frank", role: "Tester" },
+//         },
+//         },
+//     };
+    
+//   console.log(organization.department1.employees.emp1.name); //? Output: Bob
+
+
+//! Scope of variable
+
+// var a = 10;
+// {
+//     let a = 20;
+// }
+// var b = 30;
+// {
+//     let b = 60;
+// }
+
+// console.log(a); // Output: 10
+// console.log(b); // Output: 30
 
 
 //!..............................................
