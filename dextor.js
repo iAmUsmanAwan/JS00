@@ -1110,6 +1110,131 @@ NaN                                                                   */
 // console.log(a); // Output: 10
 // console.log(b); // Output: 30
 
+//* Another Example
+//! Temporal Dead Zone (TDZ):
+
+// a = 34;   // a has not been declared yet
+// let a;     //? In JavaScript, variables declared with let or const are in a "temporal dead zone" from the start of the block until their declaration is encountered. During this period, accessing the variable (even just assigning a value to it) results in a ReferenceError.
+// console.log(a);
+
+
+//! Fibonacci sequence
+//* ⚪🟢🔵
+
+//* Iterative Approach
+//? Most efficient for a single Fibonacci number.
+
+// function fibonacciIterative(n) {
+//     if (n <= 0) return 0;      //? If `n` is 0 or less, return 0 (base case).
+//     if (n === 1) return 1;     //? If `n` is 1, return 1 (base case).
+    
+//         let prev = 0, curr = 1;      // Start with the first two Fibonacci numbers: 0 and 1. prev keeps track of the Fibonacci number before the current one. curr holds the current Fibonacci number.
+//         for (let i = 2; i <= n; i++) {      // Start a loop from 2 (since we already know the Fibonacci numbers for n = 0 and n = 1).
+//         const temp = curr;    // Store the current value of `curr` in a temporary variable.
+//         curr = curr + prev;     // Update `curr` to the sum of `curr` and `prev`.
+//         prev = temp;     // Update `prev` to the old value of `curr` (from `temp`).
+//         }
+//         return curr;
+//     }
+    
+//   console.log(fibonacciIterative(5)); // Output: 5 , as the fifth number in fibonacci series is 5 
+
+
+//* Recursive Approach
+//? Simple but not optimized.
+
+function fibonacciRecursive(n) {
+    if (n <= 0) return 0;
+    if (n === 1) return 1;
+    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+    }
+
+  console.log(fibonacciRecursive(10)); // Output: 55
+
+
+//* Using Memoization
+//? Efficient recursive approach for larger inputs.
+
+function fibonacciMemoization(n, memo = {}) {
+    if (n in memo) return memo[n];
+    if (n <= 0) return 0;
+    if (n === 1) return 1;
+
+    memo[n] = fibonacciMemoization(n - 1, memo) + fibonacciMemoization(n - 2, memo);
+    return memo[n];
+    }
+
+  console.log(fibonacciMemoization(10)); // Output: 55
+
+
+//* Generate Fibonacci Sequence
+//? Useful to generate multiple Fibonacci numbers.
+
+function generateFibonacci(n) {
+    if (n <= 0) return [];
+    if (n === 1) return [0];
+    if (n === 2) return [0, 1];
+
+    const fib = [0, 1];
+    for (let i = 2; i < n; i++) {
+        fib.push(fib[i - 1] + fib[i - 2]);
+    }
+    return fib;
+    }
+
+  console.log(generateFibonacci(10)); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+
+
+//? Get two or more same occurences in a array 
+
+let a = [1, 2, 3, 4, 5, 6, 2, 4, 6]
+function getDuplicate(n){
+    for (let i = 0; i < n.length; i++) {
+        for (let j = i+1 ; j < n.length; j++) {
+            let temp = n[i];
+            if(temp == n[j]){
+                console.log(temp);
+            }
+            
+        }
+        
+    }
+}
+getDuplicate(a);
+
+
+//! Infinite currying
+//? Infinite currying relies on closures to maintain the intermediate state of calculations (a). Infinite currying is a way to write concise, chainable, and elegant code for problems involving repeated operations. It's often used in functional programming.
+
+function add(a) {
+    return function(b) {
+        if (b !== undefined) {
+            return add(a + b); // Keeps returning the function
+        }
+        return a; // If no argument is provided, return the accumulated result
+    };
+}
+
+console.log(add(1)(2)(3)(4)()); // Output: 10
+
+
+//* Another Practical Example: Multiplication
+function multiply(a) {
+    return function(b) {
+        if (b !== undefined) {
+            return multiply(a * b); // Keep returning the function
+        }
+        return a; // Return the final product
+    };
+}
+
+console.log(multiply(2)(3)(4)()); // Output: 24
+
+
+
+
+
 
 //!..............................................
 
