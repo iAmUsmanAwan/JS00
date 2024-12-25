@@ -1118,10 +1118,11 @@ NaN                                                                   */
 // console.log(a);
 
 
-//! Fibonacci sequence
+// FIXME:
+//* Fibonacci sequence
 //* ⚪🟢🔵
 
-//* Iterative Approach
+//! Iterative Approach
 //? Most efficient for a single Fibonacci number.
 
 // function fibonacciIterative(n) {
@@ -1139,98 +1140,125 @@ NaN                                                                   */
     
 //   console.log(fibonacciIterative(5)); // Output: 5 , as the fifth number in fibonacci series is 5 
 
-
-//* Recursive Approach
-//? Simple but not optimized.
-
-function fibonacciRecursive(n) {
-    if (n <= 0) return 0;
-    if (n === 1) return 1;
-    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
-    }
-
-  console.log(fibonacciRecursive(10)); // Output: 55
-
-
-//* Using Memoization
-//? Efficient recursive approach for larger inputs.
-
-function fibonacciMemoization(n, memo = {}) {
-    if (n in memo) return memo[n];
-    if (n <= 0) return 0;
-    if (n === 1) return 1;
-
-    memo[n] = fibonacciMemoization(n - 1, memo) + fibonacciMemoization(n - 2, memo);
-    return memo[n];
-    }
-
-  console.log(fibonacciMemoization(10)); // Output: 55
-
-
-//* Generate Fibonacci Sequence
+//! Generate Fibonacci Sequence
 //? Useful to generate multiple Fibonacci numbers.
 
-function generateFibonacci(n) {
-    if (n <= 0) return [];
-    if (n === 1) return [0];
-    if (n === 2) return [0, 1];
+// function generateFibonacci(n) {
+//     if (n <= 0) return [];
+//     if (n === 1) return [0];
+//     if (n === 2) return [0, 1];
 
-    const fib = [0, 1];
-    for (let i = 2; i < n; i++) {
-        fib.push(fib[i - 1] + fib[i - 2]);
-    }
-    return fib;
-    }
+//     const fib = [0, 1];
+//     for (let i = 2; i < n; i++) {
+//         fib.push(fib[i - 1] + fib[i - 2]);
+//     }
+//     return fib;
+//     }
 
-  console.log(generateFibonacci(10)); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+//   console.log(generateFibonacci(10)); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
 
+//! Get two or more same occurences in a array 
 
-//? Get two or more same occurences in a array 
-
-let a = [1, 2, 3, 4, 5, 6, 2, 4, 6]
-function getDuplicate(n){
-    for (let i = 0; i < n.length; i++) {
-        for (let j = i+1 ; j < n.length; j++) {
-            let temp = n[i];
-            if(temp == n[j]){
-                console.log(temp);
-            }
+// let a = [1, 2, 3, 4, 5, 6, 2, 4, 6]
+// function getDuplicate(n){
+//     for (let i = 0; i < n.length; i++) {
+//         for (let j = i+1 ; j < n.length; j++) {
+//             let temp = n[i];
+//             if(temp == n[j]){
+//                 console.log(temp);
+//             }
             
-        }
+//         }
         
-    }
-}
-getDuplicate(a);
+//     }
+// }
+// getDuplicate(a);
 
 
 //! Infinite currying
 //? Infinite currying relies on closures to maintain the intermediate state of calculations (a). Infinite currying is a way to write concise, chainable, and elegant code for problems involving repeated operations. It's often used in functional programming.
 
-function add(a) {
-    return function(b) {
-        if (b !== undefined) {
-            return add(a + b); // Keeps returning the function
-        }
-        return a; // If no argument is provided, return the accumulated result
-    };
-}
+// function add(a) {
+//     return function(b) {
+//         if (b !== undefined) {
+//             return add(a + b); // Keeps returning the function
+//         }
+//         return a; // If no argument is provided, return the accumulated result
+//     };
+// }
 
-console.log(add(1)(2)(3)(4)()); // Output: 10
+// console.log(add(1)(2)(3)(4)()); // Output: 10
 
 
 //* Another Practical Example: Multiplication
-function multiply(a) {
-    return function(b) {
-        if (b !== undefined) {
-            return multiply(a * b); // Keep returning the function
+// function multiply(a) {
+//     return function(b) {
+//         if (b !== undefined) {
+//             return multiply(a * b); // Keep returning the function
+//         }
+//         return a; // Return the final product
+//     };
+// }
+
+// console.log(multiply(2)(3)(4)()); // Output: 24
+
+
+// FIXME:
+//* Coin Change 
+//* ⚪🟢🔵
+
+//? Given:
+// An array of coin denominations, coins = [c₁, c₂, ..., cₙ].
+// A target amount, amount.
+//? Objective:
+// Find the minimum number of coins required to make up the given amount.
+// If it's not possible to make up the amount with the given coins, return -1.
+
+//! Dynamic Programming (Iterative) Approach  {for optimal performance}
+
+// function coinChangeDP(coins, amount) {
+//     // Initialize DP array with amount + 1 (a value greater than any possible minimum)
+//     const dp = new Array(amount + 1).fill(amount + 1);
+//     dp[0] = 0; // Base case: 0 coins are needed to make amount 0
+
+//     for (let i = 1; i <= amount; i++) {
+//         for (let coin of coins) {
+//             if (coin <= i) {
+//                 dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+//             }
+//         }
+//     }
+
+//     // If dp[amount] has not been updated, return -1
+//     return dp[amount] > amount ? -1 : dp[amount];
+// }
+
+// // Example Usage:
+// const coins = [1, 2, 5];
+// const amount = 11;
+// console.log(coinChangeDP(coins, amount)); // Output: 3
+
+
+//! Additional: Counting the Number of Ways to Make Change
+
+function countWaysToMakeChange(coins, amount) {
+    const dp = new Array(amount + 1).fill(0);
+    dp[0] = 1; // There's 1 way to make amount 0
+
+    for (let coin of coins) {
+        for (let i = coin; i <= amount; i++) {
+            dp[i] += dp[i - coin];
         }
-        return a; // Return the final product
-    };
+    }
+
+    return dp[amount];
 }
 
-console.log(multiply(2)(3)(4)()); // Output: 24
-
+// Example Usage:
+const coins = [1, 2, 5];
+const amount = 1;
+console.log(countWaysToMakeChange(coins, amount)); // Output: 4
 
 
 
