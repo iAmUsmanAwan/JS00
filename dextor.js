@@ -1121,8 +1121,8 @@ NaN                                                                   */
 // FIXME:
 //* Fibonacci sequence
 //* ⚪🟢🔵
-
 //! Iterative Approach
+
 //? Most efficient for a single Fibonacci number.
 
 // function fibonacciIterative(n) {
