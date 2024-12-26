@@ -1242,23 +1242,23 @@ NaN                                                                   */
 
 //! Additional: Counting the Number of Ways to Make Change
 
-function countWaysToMakeChange(coins, amount) {
-    const dp = new Array(amount + 1).fill(0);
-    dp[0] = 1; // There's 1 way to make amount 0
+// function countWaysToMakeChange(coins, amount) {
+//     const dp = new Array(amount + 1).fill(0);
+//     dp[0] = 1; // There's 1 way to make amount 0 (by using no coins).
 
-    for (let coin of coins) {
-        for (let i = coin; i <= amount; i++) {
-            dp[i] += dp[i - coin];
-        }
-    }
+//     for (let coin of coins) {
+//         for (let i = coin; i <= amount; i++) {
+//             dp[i] += dp[i - coin];
+//         }
+//     }
 
-    return dp[amount];
-}
+//     return dp[amount];
+// }
 
-// Example Usage:
-const coins = [1, 2, 5];
-const amount = 1;
-console.log(countWaysToMakeChange(coins, amount)); // Output: 4
+// // Example Usage:
+// const coins = [1, 2, 5];
+// const amount = 5;
+// console.log(countWaysToMakeChange(coins, amount)); // Output: 4
 
 
 
