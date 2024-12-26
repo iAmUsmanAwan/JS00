@@ -1252,7 +1252,7 @@ NaN                                                                   */
 //         }
 //     }
 
-//     return dp[amount];
+//     return dp[amount];   // The value dp[amount] is built up step by step during the nested loops. It represents the number of ways to make change for the given amount.
 // }
 
 // // Example Usage:
@@ -1261,6 +1261,71 @@ NaN                                                                   */
 // console.log(countWaysToMakeChange(coins, amount)); // Output: 4
 
 
+// FIXME:
+//* Given an array of integers, find the pairs that adds up to get a particular number
+
+// function findPairs(array, targetSum) {
+//     const pairs = [];
+//     const seen = new Set(); // To keep track of visited numbers
+
+//     for (let num of array) {
+//         const complement = targetSum - num; // The number that would complete the pair. The complement is the number that, when added to num, equals the targetSum. For example, { if targetSum = 9 and num = 4, then complement = 9 - 4 = 5. this will get the 5 from the array and add it to the pairs array }
+//         if (seen.has(complement)) {
+//             pairs.push([complement, num]);
+//         }
+//         seen.add(num); // Add the current number to the set
+//     }
+
+//     return pairs;
+// }
+
+// // Example usage
+// const array = [1, 2, 3, 4, 5, 6, 7, 8];
+// const targetSum = 9;
+// console.log(findPairs(array, targetSum));
+
+
+//! Basic Usage of Set in JavaScript
+
+// const mySet = new Set();
+
+// mySet.add(1); // Add 1 to the set
+// mySet.add(2); // Add 2 to the set
+// mySet.add(1); // Duplicate, ignored
+
+// console.log(mySet); // Output: Set { 1, 2 }
+// console.log(mySet.has(1)); // Output: true (1 exists in the set)
+// console.log(mySet.has(3)); // Output: false (3 is not in the set)
+
+// mySet.delete(2); // Remove 2 from the set
+// console.log(mySet); // Output: Set { 1 }
+
+//? The Set object lets you store unique values of any type, whether primitive values or object references.
+
+// const array = [1, 2, 3, 4, 1, 2];
+// const uniqueValues = [...new Set(array)];
+// console.log(uniqueValues); // Output: [1, 2, 3, 4]
+
+
+//! Print a tree of * with for loop
+
+// function printTree(height) {
+//     for (let i = 1; i <= height; i++) {
+//         // Print spaces for alignment
+//         const spaces = ' '.repeat(height - i);
+//         //? Print stars for the tree layer
+//         const stars = '*'.repeat(2 * i - 1);    
+//         // If i = 1, 2 * 1 - 1 = 1 star.
+//         // If i = 2, 2 * 2 - 1 = 3 stars.
+//         // If i = 3, 2 * 3 - 1 = 5 stars, and so on. 
+//         console.log(spaces + stars);
+//     }
+//     const spaces = ' '.repeat(height - 1);
+//     console.log(spaces + '*'); // Print the tree trunk / stem
+// }
+
+// // Example: Print a tree with height 5
+// printTree(5);
 
 
 
