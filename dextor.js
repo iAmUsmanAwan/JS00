@@ -1328,6 +1328,27 @@ NaN                                                                   */
 // printTree(5);
 
 
+//! Seperate positive and negetive  numbers from a array 
+
+function seperateNumbers(a){
+    let positiveNumbers = [];
+    let negativeNumbers = [];
+    for (let i = 0; i < array.length; i++) {
+        if (a[i]>=0){
+            a[1].push.positiveNumbers;
+        }
+        if(a[i]<0){
+            a[1].push.negativeNumbers;
+        }
+
+        return positiveNumbers, negativeNumbers;
+    }
+}
+
+
+//! Swap the value of two variables without using third variable
+
+
 
 
 
