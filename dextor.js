@@ -1,12 +1,139 @@
+// TODO: Primitive Data Types:
+//* Primitive data types are immutable and directly store values. JavaScript has seven primitive data types:
+
+//? String
+//* Represents textual data.
+
 // const fullName = "Muhammad Usman";
-// var email = "usman@gmail.com";
-// var courseName = "React JS Bootcamp";
-// var isLoggedIn = false ;
-// var loggedCount = 34 ;
+// var email = "muhammadusmanawan88@gmail.com";
 // var paymentMode = "Credit Card";
+// console.log(typeof fullName); // Output: "string"
+// console.log(typeof email); // Output: "string"
+// console.log(typeof paymentMode); // Output: "string"
+
+//? Number
+//* Represents numeric values, including integers and floating-point numbers.
+//* Special numeric values: Infinity, -Infinity, and NaN (Not-a-Number).
+
+// let age = 25;
+// let price = 19.99;
+// var loggedCount = 34 ;
+// console.log(typeof age);   // Output: "number"
+// console.log(typeof price); // Output: "number"
+// console.log(typeof loggedCount); // Output: "number"
+
+//? BigInt
+//* Represents integers larger than the Number type can safely represent.
+//* BigInt literals are created by appending n to the end of an integer.
+
+// let bigNumber = 123456789012345678901234567890n;
+// console.log(typeof bigNumber); // Output: "bigint"
+
+//? Boolean
+//* Represents a logical entity and can have only two values: true or false.
+
+// let isLoggedIn = true;
+// console.log(typeof isLoggedIn); // Output: "boolean"
+
+// var a= 40;
+// var b= 20;
+// var answer = a > b ; 
+// console.log(answer);
+
+
+//? Undefined
+//* Represents a variable that has been declared but not assigned a value.
+
+// let x;
+// console.log(typeof x); // Output: "undefined"
+
+//? Null
+//* Represents the intentional absence of any object value.
+//* Note: typeof null returns "object" due to a historical bug in JavaScript.
+
+// let emptyValue = null;
+// console.log(typeof emptyValue); // Output: "object"
+
+//? Symbol
+//* Represents a unique identifier. Often used as object property keys to avoid name collisions.
+
+// let id = Symbol("id");
+// console.log(typeof id); // Output: "symbol"
+
+
+// TODO: Non-Primitive Data Types:
+//* Non-primitive data types store references to objects and are mutable.
+
+//? Object
+//* A collection of key-value pairs. Keys can be strings or symbols, and values can be any data type.
+
+// let user = { name: "Alice", age: 30 };
+// console.log(typeof user); // Output: "object"
+
+//? Array
+//* A special kind of object that stores a list of values.
+
+// let numbers = [1, 2, 3, 4];
+// console.log(typeof numbers); // Output: "object"
+
+//? Function
+//* A callable object that executes a block of code. Functions are also a type of object.
+
+// function greet() {
+//     return "Hello";
+//     }
+//   console.log(typeof greet); // Output: "function"
+
+//? Date, RegExp, Map, Set, WeakMap, WeakSet
+//* These are specialized object types provided by JavaScript for specific use cases:
+
+// Date: Represents a date and time.
+// RegExp: Represents a regular expression.
+// Map: A collection of key-value pairs where keys can be any data type.    
+// Set: A collection of unique values.
+// WeakMap, WeakSet: Similar to Map and Set, but with some differences in behavior.
+// Weaksets are used to store weak references to objects, which do not prevent garbage collection.
+// weakmaps are used to store key-value pairs where the keys are weakly referenced.
+
+// TODO: Dynamic Typing:
+//* JavaScript is a dynamically-typed language, meaning the type of a variable is determined at runtime and can change dynamically.
+
+// let variable = 42;       // Initially a number
+// variable = "Hello";      // Now a string
+// console.log(typeof variable); // Output: "string"
+
+
+//! 
+const theDictator = 'Admiral General Aladin';
+
+
+// TODO: String Concatination:
+//? String concatenation is the process of combining two or more strings into a single string. In JavaScript, the + operator is commonly used for this purpose.
+
 // console.log("my full name is " + fullName );
 // console.log("my full name is ", fullName );
-//       TODO:    Interpolation:
+
+//? Using Template Literals (Preferred)
+//* Template literals, introduced in ES6, are a cleaner way to concatenate strings using backticks (`) and ${} for variable interpolation:
+
+// console.log(`my full name is ${fullName}`);   // Output: "my full name is John Doe"
+
+
+//? Using concat() Method
+
+// let firstName = "John";
+// let lastName = "Doe";
+// console.log("my full name is ".concat(firstName, " ", lastName));    // Output: "my full name is John Doe"
+
+
+// TODO: Interpolation:
+//? Interpolation is the process of embedding or inserting variables or expressions directly into a string. It allows for dynamically constructing strings by substituting placeholders with actual values or computed results.
+
+// var fullName = "Muhammad Usman";
+// var courseName = "JavaScript";
+// var email = "muhammadusmanawan88@gmail.com";
+// PaymentMethod = "Credit Card";
+
 // console.log(`
 //     With full name = ${fullName}
 //     And Selected course = ${courseName}
@@ -15,26 +142,35 @@
 //     is welcomed to the website.
 //     `);
 
-const theDictator = 'Admiral General Aladin';
-// console.log(theDictator);
+
+// TODO: Array Operations:
 
 // array = ['red' , 88 ];
-// array [2] = 'greeen';
+// array [2] = 'greeen';  // this is how to add a new element to the array
 // console.log(array);
 
-// var a= 410;
-// var b= 20;
-// var answer = a > b ; 
-// console.log(answer);
+// array.push('blue');   // another way to add a new element to the array
+// console.log(array);
 
-// TODO:   How to find Discounted Price
+// array.pop();   // this is how to delete the last element of the array
+// console.log(array);
+
+// array.shift();    // this is how to delete the first element of the array
+// console.log(array);
+
+// array.unshift('yellow');    // this is how to add a new element to the start of the array
+// console.log(array);
+
+
+// TODO: How to find Discounted Price:
+
 // var sellingPrice = 100;
 // var listingPrice = 1000;
 // var discountPercent = ((listingPrice-sellingPrice) / listingPrice) * 100 ;
-// var discountedPrice = Math.round(discountPercent);
+// var discountedPrice = Math.round(discountPercent);   //? this is how to round off the number to the nearest integer
 // console.log(discountedPrice);
 
-//TODO:     if else conxept in javascript
+// TODO: If-Else conxept in javascript:
 
 // var authentic = false;
 // if(authentic)
@@ -44,11 +180,12 @@ const theDictator = 'Admiral General Aladin';
 // console.log('the condition is false');
 // } 
 
-// ! writing if statement alternative way is down below 
+//* Pro way of Writing If statement in one line
 
 // authentic ? console.log('condition was true') : console.log('conditoin was false') ;
 
-// ! Switch statement Example
+// TODO: Switch statement Example
+
 // var temprature = 20 ;
 
 // var name = "Usman";
@@ -58,28 +195,18 @@ const theDictator = 'Admiral General Aladin';
 //         return console.log('you have full access');
 //         break;
 //     case 'Ahmad':
-//         return console.log('you are younger brother of Usman');
+//         return console.log('you are first younger brother of Usman');
+//     case 'Tayyab':
+//         return console.log('you are second younger brother of Usman');
 //         break;
 //     default:
 //         return console.log('who tf are you?');
 //         break;
 // }                     
 
-/*               TODO:     also       FIXME:          +  Multi line comment
+//! Another Example
 
-! falsy values    {important for interview part}
-?they will always be considered as false which is a boolean expression
-
-undefined
-null
-""
-0
-''
-NaN                                                                   */
-
-// ! Switch statement Example
-
-// var getuserrole = function (name , role)           // this is a unique way of declaring a variable as a function
+// var getuserrole = function (name , role)    // this is a unique way of declaring a variable as a function
 // {
 //     switch(role)
 //     {
@@ -104,7 +231,23 @@ NaN                                                                   */
 // var value = getuserrole("Usman" , "admin");  //? this must be called after the function because it was assigned to a variable and if it is called before the function it will generate error like undefined 
 // console.log(value);
 
-// ! ?????????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+
+/*  TODO: Multi line comment
+
+? or by selecting multi lines and pressing ( ctrl + / )
+
+
+TODO: Falsy Values  {important for interview part}
+* They will always be considered as false which is a boolean expression
+
+undefined
+null
+""
+0
+''
+NaN                                                                                */
+
 
 // console.log('Hello WORLD by pressing alt and show curser');
 // console.log('Hello WORLD by pressing alt and show curser');
@@ -112,28 +255,28 @@ NaN                                                                   */
 // console.log('Hello WORLD by pressing alt and show curser');
 // console.log('Hello WORLD by pressing alt and show curser');
 
-//?  selecting multi lines and pressing ( ctrl + / )
 /*
-    *>  press ( alt + up or down key ) to move the line up or down  
-    *>  press ( alt + shift + up or down key ) to copy the line 
+//     *>  press ( alt + up or down key ) to move the line up or down  
+//     *>  press ( alt + shift + up or down key ) to copy the line 
     
 */
 
 
-// TODO:        function conxept which gives output    
+// TODO: Function conxept which gives output:    
 
 // function sayname (name)
 // {
-    //     var userName = name ;
-    //     console.log("Hello bro ", userName);
-    //     console.log(`wat are you doing today? ${userName}`);
-    // }
+//         var userName = name ;
+//         console.log("Hello bro ", userName);
+//         console.log(`wat are you doing today? ${userName}`);
+//     }
     
-    // var name = "papi chulo";
-    // sayname(name);
-    // sayname("usman");
+//     var name = "Captain Jack Sparrow";
+//     sayname(name);
+//     sayname("Captain Teague");
 
-// TODO:        function conxept and the difference between return statement and console loging    
+
+// TODO: Function conxept and the difference between return statement and console loging:    
 
 // function greetings(){
 //     return "Greetings Admiral General";
@@ -142,51 +285,57 @@ NaN                                                                   */
 // console.log(greet);
 // console.log(greetings());
 
-// TODO:          function conxept which return boolean values 
+
+// // TODO: Function conxept which return boolean values: 
 
 // function isEven(number)
 // {
 //         return number % 2 === 0 ;
 // }
     
-//! //       ? first example:
+// //? First example:
 // console.log(isEven(3));
     
-//! //       ? second example:
+// //? Second example:
 // var result = [2 , 4 , 6 , 8].every(isEven); // here the function is referenced to a array and checks every element of the array
 // console.log(result);
 
-//?  Arrow function
+
+// TODO: Arrow function:
+
 // var result = [2, 4, 6, 8].every((e) => {
 //         return e % 2 === 0;
-//     })
+//         })
 // console.log(result);
 
-// //?  Arrow function can also be used without return keyword and curly brackets are also excluded
+//*  Arrow function can also be used without curly brackets, when we don't want to use return keyword
+
 // var result = [2, 4, 6, 8].every((e) =>  e % 2 === 0 )
 // console.log(result);
 
-//! // third example which shows the difference between callback and regular function:
+//! Third example which shows the difference between callback and regular function:
 
 // function greet(name) {
-//     console.log("Hello, " + name + "!");
-//     }
+//         console.log("Hello, " + name + "!");
+//         }
 
 // function processUserInput(callback) {
-//     const name = "Alice";
-//     callback(name);
-//     }
+//         const name = "Alice";
+//         callback(name);
+//         }
 
 // processUserInput(greet);  // Output: Hello, Alice!        
-// //? greet is a callback function because it's passed as an argument to processUserInput.
-// //* processUserInput calls greet later, using the name parameter.
 
-//! fourth example which shows how regular functions handle this keyword: 
+//* greet is a callback function because it's passed as an argument to processUserInput.
+//* processUserInput calls greet later, using the name parameter.
+
+
+//! Fourth example which shows how regular functions handle this keyword: 
 //? gives an error in strict mode because it tries to access a non-existent property of the global object (this)
 
 // function Person() {
 //     this.age = 0;
-    
+
 //     setInterval(function() {
 //         this.age++; // `this` here refers to the global object, not Person
 //         console.log(this.age);  // NaN or unexpected behavior in strict mode
@@ -195,11 +344,11 @@ NaN                                                                   */
 
 // const p = new Person();
 
-//! fifth example which shows how arrow functions handle this keyword:
+//! Fifth example which shows how arrow functions handle this keyword:
 
 // function Person() {
 //     this.age = 0;
-    
+
 //     const intervalId = setInterval(() => {
 //         if (this.age < 30) {         // Condition: Only increment if age is less than 10
 //             this.age++;
@@ -212,7 +361,7 @@ NaN                                                                   */
 // }
 // const p = new Person();
 
-//! sixth example which shows Example of Callback Function with Regular Function:
+//! Sixth example which shows Example of Callback Function with Regular Function:
 
 // function displayData(data) {
 //     console.log(data);
@@ -226,7 +375,7 @@ NaN                                                                   */
 
 // fetchData(displayData);  // Output after 1 second: Data received!
 
-//! seventh example which shows Example of Callback Function with Arrow Function:
+//! Seventh example which shows Example of Callback Function with Arrow Function:
 
 // function fetchData(callback) {
 //     setTimeout(() => {
@@ -236,18 +385,20 @@ NaN                                                                   */
 
 // fetchData(data => console.log(data));  // Output after 1 second: Data received!
 
-// TODO:          function conxept with global context 
+
+// TODO: Function conxept with global context:
 
 // tipper(20);  // simply the function is called before the decleration of the function
 // function tipper(a){
 //         var bill =parseInt(a);       // here the number in the string entered  will be converted into integer
-    
+
 //         console.log(a+5);       // one simple way but it will not convert strings into number but will do string concatination
 //         console.log(bill+5);      // or more sophisticated way
 //     }
 //     tipper("50");
-    
-// TODO:          function conxept with global context + scope chain 
+
+
+// TODO: Function conxept with global context + scope chain: 
 // ? the child function can request from parent function
 
 // var name = "Usman";
@@ -255,7 +406,7 @@ NaN                                                                   */
     // var name = "Ahmad";     // if this is not initialized then this function will console.log => Usman   
 //     console.log("this is line number 178 ", name);
 //     printNameTwo();
-    
+
 //     function printNameTwo(){
         // var name = "Tayyab";  // if this is not initialized then this function will console.log => Ahmad
 //         console.log("this is line number 183 ", name);
@@ -263,7 +414,7 @@ NaN                                                                   */
 // }
 // printName();
 
-// TODO:         creating an array      
+// TODO: Creating an array:      
 
 // var countries = ["Pakistan", "Russia", "China", "Germany", "Japan"];
 // var fruits = new Array("Apple", "Peach", "Mango", "Banana", "Pineapple");
@@ -272,54 +423,55 @@ NaN                                                                   */
 // console.log(fruits[1]);
 // console.log(fruits.length);
 
-// TODO:          make a new array from a array by breaking it 
+// TODO: Make a new array from a array by breaking it: 
 
 // console.log(Array.from("Aladeen"));
 
-// TODO:         find the index of element in array      
+// TODO: Find the index of element in array:      
 
 // console.log(fruits.indexOf("Pineapple"));
 // console.log(fruits.indexOf("Aeroplane"));
 
-// TODO:          replace element in a array
+// TODO: Replace element in a array:
 
 // fruits[2] = "Grapes";
 // console.log(fruits);
 
-// TODO:          deleting last element in array  
+// TODO: Deleting last element in array:  
 
 // fruits.pop(); 
 // fruits.pop(); 
 // console.log(fruits);
 
-// TODO:         adding and deleting first element in array  
+// TODO: Adding and Deleting first element in array:  
 
 // fruits.unshift("Avacado");      // not recommended
 // console.log(fruits);
 // fruits.shift();
 // console.log(fruits);
 
-// TODO:           fill conxept in array   
+// TODO: Fill conxept in array:   
 
 // var myArray = [1, 3, 5, 6, 7, 2, 9, 8];
 // console.log(myArray.fill(88));
 // console.log(myArray.fill("L"));
 // console.log(myArray.fill(77 , 2 )); // it will print 77 fron location number 2
 // console.log(myArray.fill(99 , 1 , 4)); // it will fill 99 from location number 1 till location number 4, excluding number 4 
+
 // * the start range is inclusive and end range is exclusive
 
-// TODO:           filter conxept in array
+// TODO: Filter conxept in array:
 
 // var numberArray = [ 11, 22, 33, 44, 55, 66, 77, 88, 99 ];
 // var resultArray = numberArray.filter( (numb) => (numb < 55) ) ;
 // console.log(resultArray);
 
-// TODO:          slice conxept in array
+// TODO: Slice conxept in array:
 
 // var users =  ["Ted" , "Tim" , "Tony" , "Sam" , "Sad" , "Sod"];
 // console.log(users.slice(1, 4));
 
-// TODO:         splice conxept in array
+// TODO: Splice conxept in array:
 // * here second value is how much to count from the position mentioned
 
 // users.splice(1, 3 , "HI"); // here 1 is the starting point and 3 is the range
@@ -327,7 +479,8 @@ NaN                                                                   */
 // users.splice(1, 2 , "HI", "BYE");  // here starting from position 1 and starting from 1 count 2 and replace them with "HI", "BYE"
 // console.log(users);
 
-//TODO:     object conxept
+
+//TODO: Object conxept:
 // * values are stored in key value pair format
 
 // var user = {
@@ -344,7 +497,8 @@ NaN                                                                   */
 // console.log(user);
 // console.table(user);     // or more sophisticated way
 
-//TODO:      object conxept with funtions
+
+//TODO: Object conxept with funtions:
 
 // var user = {
 //     userId: 88 ,
@@ -382,7 +536,8 @@ NaN                                                                   */
 
 // user.getInfo() ;      // marvelous
 
-// TODO: simple for loop
+
+// TODO: Simple for loop:
 
 // * one simple loop example
 
@@ -413,12 +568,14 @@ NaN                                                                   */
 //     console.log(myArray[i]);
 // }
 
-// TODO: simpler for each loop used for arrays  (it is more of a method on array) 
+
+// TODO: simpler (For Each) loop used for arrays  (it is more of a method on array): 
 
 // myArray.forEach( (s) => (console.log(s)) );   // this way 
 // myArray.forEach( (s) => console.log(s) );     //? or this way totaly same
 
-// TODO: for of loop used for array
+
+// TODO: (For Of) loop used for array:
 //? for arrays specially
 
 // const names = ["Youtube", "Facebook", "Instagram", "Netflix", "Amazon" ];
@@ -426,7 +583,8 @@ NaN                                                                   */
 //         console.log(ironman);
 // }
 
-// TODO: for in loop used for objects
+
+// TODO: (For In) loop used for objects:
 //? for objects specially
 
 // const symbols = {
@@ -442,7 +600,8 @@ NaN                                                                   */
 //         // console.log(symbols);         // Against each entry of object, the key value pair of object is dumped 
 //     }
 
-// TODO: this keyword returning global object
+
+// TODO: (This) keyword returning global object:
 
 // var user = {
 //     name : "ABC", 
@@ -464,7 +623,8 @@ NaN                                                                   */
 // user.getName();     // this is not considered as a regular function calling because it is called through an object 
 // console.log("Line 390", this);  // here this keyword refers to the global object or windows object, which in case of node is a global empty object
 
-// TODO: new keyword example 
+
+// TODO: (New) keyword example: 
 
 // var User = function(firstName , courseCount )
 // {
@@ -484,8 +644,9 @@ NaN                                                                   */
 // // console.log(object2);
 // // object2.getCourseCount();
 
+
 //* >>>>>>>>      continued ...
-// TODO: prototype conxept
+// TODO: Prototype conxept:
 // ? to make a function of the object (outside of the object), we use prototype keyword
 
 // User.prototype.getFirstName = function ()
@@ -507,7 +668,8 @@ NaN                                                                   */
 // object3.getFirstName();     // gets the first name of object3
 // object3.getCourseCount();       // gets the course count of object3
 
-// TODO: object.create from MDN conxept
+
+// TODO: (Object.create) from MDN conxept:
 //? creating a proto or a class which defines how every object will be created
 
 // var User = {
@@ -533,7 +695,8 @@ NaN                                                                   */
 // var roly = Barbosa.role; // this will pass the role of Barbosa to a variable 'roly'
 // console.log(roly); // this will give the role of Barbosa
 
-// TODO: Self Anonymous Executing function or IIFE Immediatly Invoked Function Expression
+
+// TODO: Self Anonymous Executing function or IIFE Immediatly Invoked Function Expression:
 
 // (function (){
 //     console.log(`Q.>>  your name is Jack Sparrow?`);
@@ -541,7 +704,8 @@ NaN                                                                   */
 // }
 // )();
 
-// TODO: Lexical Scoping  + a little touch to Closure
+
+// TODO: Lexical Scoping  + a little touch to Closure:
 
 // function init () 
 //     {
@@ -554,7 +718,8 @@ NaN                                                                   */
 //     }
 // init();
 
-// TODO:  Closure + Design Decisions of Redux("A JS library for predictable and maintainable global state management") which is Javascript state management library (also in React and Angular)
+
+// TODO: Closure + Design Decisions of Redux("A JS library for predictable and maintainable global state management") which is Javascript state management library (also in React and Angular):
 
 //?! one example
 
@@ -587,7 +752,8 @@ NaN                                                                   */
 
 // console.log(doAdd(3)(4));  // function can also be called like this 
 
-// TODO: Bind and call concept in closure    
+
+// TODO: Bind and call concept in closure:    
 //? in order to use a function of some other object with same properties bind or call is used
 
 // var firstPirate = {
@@ -622,7 +788,8 @@ NaN                                                                   */
 // ? call just calls the function right away
 // firstPirate.getInfo.call(secondPirate); 
 
-// TODO:     strings in JavaScript
+
+// TODO: Strings in JavaScript:
 //* Escaping characters  
 
 //? one way
@@ -651,7 +818,7 @@ NaN                                                                   */
 // console.log(string4)
 
 
-// TODO:     strings in JavaScript
+// TODO: Strings in JavaScript:
 //* ASCI values of the alphabets 
 //? ASCII value of 'a' is 97, ASCII value of 'b' is 98, ASCII value of 'c' is 99, ASCII value of 'd' is 100, and so on.
 
@@ -674,7 +841,7 @@ NaN                                                                   */
 // }
 
 
-// TODO:  Replace and ReplaceAll in string  
+// TODO: Replace and ReplaceAll in string:  
 //*      >>>>>>>>     the one used in 3 idiot movie
 
 // const str = "Do Yahoo people really love Yahoo?";
@@ -683,7 +850,7 @@ NaN                                                                   */
 // console.log(newstr);
 
 
-// TODO:  Maps in JavaScript
+// TODO: Maps in JavaScript:
 //? they are similar to objects but with additional features and are not objects
 
 // var myMaps = new Map();
@@ -718,7 +885,8 @@ NaN                                                                   */
 // myMaps.delete("key2");
 // console.log(myMaps);
 
-// TODO:  Destructuring in JavaScript
+
+// TODO: Destructuring in JavaScript:
 //? Destructuring is a JavaScript expression that allows us to unpack values from arrays or objects into distinct variables. the datatype of the elements in the array or object must match the type of the variables being destructured. LHS ==must_be== RHS. Destructuring can also be used to swap the values of two variables.
 
 //! example for arrays
@@ -746,7 +914,8 @@ NaN                                                                   */
 // const {name, lastName, role, shipName} = myUser; // this is destructuring, it is assigning the values of myUser object to name, lastName, role and shipName //? the name of the variables should be same as the properties in the object
 // console.log(shipName);
 
-// TODO:  Spread and REST operators in JavaScript
+
+// TODO: Spread and REST operators in JavaScript:
 
 // var returnMaxValue = Math.max(2,3,4,5,6,7,8,9,10);
 // console.log(returnMaxValue);
@@ -799,7 +968,8 @@ NaN                                                                   */
 
 // console.log(addMultipleNumbers(2, 5, 1, 1));
 
-// TODO: Event loop 
+
+// TODO: Event loop: 
 
 // const uno = () => {
 //     console.log('I am Uno');
@@ -820,7 +990,8 @@ NaN                                                                   */
 // dos();  
 // tres();
 
-// TODO: Promises Async and Await
+
+// TODO: Promises Async and Await:
 
 // const uno = () => {
 //     return "I am Uno";
@@ -857,7 +1028,8 @@ NaN                                                                   */
 
 // callMe();
 
-// TODO: Promise .any()  and  .race() example
+
+// TODO: Promise .any()  and  .race() example:
 
 // const rejectMe = new Promise((_, reject) => reject("path issue"));
 // const resolveMe = new Promise(resolve => resolve());
@@ -873,7 +1045,8 @@ NaN                                                                   */
 // .then(() => console.log("All promises resolved"))
 // .catch(e => console.log("Rejected"));
 
-// TODO: Logical Assignment Operators
+
+// TODO: Logical Assignment Operators:
 
 // function cartTotal(value) {
 //     value ??= 0; //? Logical Assignment Operator. If value is undefined or null, it will be set to 0.
@@ -882,12 +1055,14 @@ NaN                                                                   */
 // cartTotal();
 // cartTotal(10);
 
-// TODO: Numerical Separators
+
+// TODO: Numerical Separators:
 
 // var longNumber = 1_23_45_67_890;  //? underscore is used as a numerical separator. it will be ignored by JavaScript while printing.
 // console.log(longNumber);
 
-// TODO: Quirky Behaviour of javascript
+
+// TODO: Quirky Behaviour of javascript:
 //* The behavior of JavaScript should be handled carefully.
 
 // const student = { 
@@ -906,7 +1081,8 @@ NaN                                                                   */
 // student.name.firstName = "Jonathan";
 // console.log(student);
 
-// TODO: Adding a random cat picture on the browser by writing a line of code in the inspect section of the browser
+
+// TODO: Adding a random cat picture on the browser by writing a line of code in the inspect section of the browser:
 
 // document.body.addEventListener('click', function () {
 //     var myParent = document.getElementsByTagName("h1")[0]; 
@@ -916,12 +1092,13 @@ NaN                                                                   */
 //     myImage.style.marginLeft = "160px";
 // });
 
-// TODO:  A function to reverse the order of characters in a word
+
+// TODO:  A function to reverse the order of characters in a word:
 
 // function reverseTheWord(word) {     // word is parameter passed to the function 
 //     var reversedWord = "";       // initially set to empty string
 //     console.log(word);      // return the original word
-    
+
 //     //? looop over the characters in reverse order
 //     for (var i = word.length - 1; i >= 0; i--) {
         
@@ -938,6 +1115,7 @@ NaN                                                                   */
 //     return reversedWord;    
 // }
 // reverseTheWord("Hello World");
+
 
 // TODO: Interview Questions Practice (Logical)
 //* ⚪🟢🔵🟡
@@ -975,7 +1153,7 @@ NaN                                                                   */
 // console.log(true + []);  //? "true"
 
 
-//! forEach
+//! ForEach
 //* Purpose: Iterates through each element of the array and executes a callback function for each element.
 //* Returns: undefined or the result of callback against each value (does not return a new array).
 //* Use Case: When you need to perform side effects like logging, updating variables, or interacting with external systems.
@@ -993,7 +1171,7 @@ NaN                                                                   */
 // })
 
 
-//! map
+//! Map
 //* Purpose: Iterates through each element of the array, applies a transformation via a callback function, and returns a new array containing the results.
 //* Returns: A new array with the transformed elements.
 //* Use Case: When you want to create a new array by transforming the elements of an existing array.
@@ -1010,7 +1188,7 @@ NaN                                                                   */
 // console.log(b); //? [ false, false, true, true ] - Original array remains unchanged
 
 
-//! object of objects
+//! Object of objects
 //* An object of objects in JavaScript refers to an object where the values are themselves objects. This structure allows us to create hierarchical or nested data models, where we can organize and access data in a meaningful way.
 
 // let a = {}
@@ -1040,11 +1218,11 @@ NaN                                                                   */
 //             age: 35,
 //         },
 //     };
-    
+
 // console.log(users);
 // console.log(users.user1.name); // Output: Alice
 // console.log(users.user3.age);  // Output: 35
-    
+
 //? You can access the inner objects and their properties using dot notation (.) or bracket notation ([]).
 // console.log(users["user1"]["name"]); // Output: Alice
 // console.log(users["user3"]["age"]);  // Output: 35
@@ -1092,7 +1270,7 @@ NaN                                                                   */
 //         },
 //         },
 //     };
-    
+
 //   console.log(organization.department1.employees.emp1.name); //? Output: Bob
 
 
@@ -1128,7 +1306,7 @@ NaN                                                                   */
 // function fibonacciIterative(n) {
 //     if (n <= 0) return 0;      //? If `n` is 0 or less, return 0 (base case).
 //     if (n === 1) return 1;     //? If `n` is 1, return 1 (base case).
-    
+
 //         let prev = 0, curr = 1;      // Start with the first two Fibonacci numbers: 0 and 1. prev keeps track of the Fibonacci number before the current one. curr holds the current Fibonacci number.
 //         for (let i = 2; i <= n; i++) {      // Start a loop from 2 (since we already know the Fibonacci numbers for n = 0 and n = 1).
 //         const temp = curr;    // Store the current value of `curr` in a temporary variable.
@@ -1137,7 +1315,7 @@ NaN                                                                   */
 //         }
 //         return curr;
 //     }
-    
+
 //   console.log(fibonacciIterative(5)); // Output: 5 , as the fifth number in fibonacci series is 5 
 
 //! Generate Fibonacci Sequence
@@ -1168,7 +1346,7 @@ NaN                                                                   */
 //             if(temp == n[j]){
 //                 console.log(temp);
 //             }
-            
+        
 //         }
         
 //     }
@@ -1285,7 +1463,7 @@ NaN                                                                   */
 // console.log(findPairs(array, targetSum));
 
 
-//! Basic Usage of Set in JavaScript
+//! Basic Usage of Set in JavaScript:
 
 // const mySet = new Set();
 
@@ -1307,7 +1485,7 @@ NaN                                                                   */
 // console.log(uniqueValues); // Output: [1, 2, 3, 4]
 
 
-//! Print a tree of * with for loop
+//! Print a tree of * with for loop:
 
 // function printTree(height) {
 //     for (let i = 1; i <= height; i++) {
@@ -1328,25 +1506,66 @@ NaN                                                                   */
 // printTree(5);
 
 
-//! Seperate positive and negetive  numbers from a array 
+// FIXME:
+//! Seperate positive and negetive  numbers from a array: 
 
-function seperateNumbers(a){
-    let positiveNumbers = [];
-    let negativeNumbers = [];
-    for (let i = 0; i < array.length; i++) {
-        if (a[i]>=0){
-            a[1].push.positiveNumbers;
-        }
-        if(a[i]<0){
-            a[1].push.negativeNumbers;
-        }
+// function separateNumbers(array) {
+//                 let positiveNumbers = [];
+//                 let negativeNumbers = [];
+                
+//                 for (let i = 0; i < array.length; i++) {
+//                 if (array[i] >= 0) {
+//                         positiveNumbers.push(array[i]);
+//                 } else {
+//                         negativeNumbers.push(array[i]);
+//                 }
+//                 }
+                
+//                 return { positiveNumbers, negativeNumbers };    // Return statement should be carefully used outside the loop
+//                 //* Return both arrays as an object, coz JavaScript does not support returning multiple values directly.
+//         }
 
-        return positiveNumbers, negativeNumbers;
-    }
-}
+// //? Example usage:
+// let numbers = [3, -1, 0, 5, -9, -2, 8];
+// let result = separateNumbers(numbers);
+
+// console.log("Positive Numbers:", result.positiveNumbers); // [3, 0, 5, 8]
+// console.log("Negative Numbers:", result.negativeNumbers); // [-1, -9, -2]
 
 
-//! Swap the value of two variables without using third variable
+// FIXME:
+//* Swap the value of two variables without using third variable:
+
+//? Using Arithmetic Operations
+//* Arithmetic operations are straightforward but can lead to overflow issues with very large numbers.
+
+// let a = 5;
+// let b = 10;
+
+// console.log(`Before Swap: a = ${a}, b = ${b}`);
+
+// // Swap using addition and subtraction
+// a = a + b; // a becomes 15
+// b = a - b; // b becomes 5 (original value of a)
+// a = a - b; // a becomes 10 (original value of b)
+
+// console.log(`After Swap: a = ${a}, b = ${b}`);
+
+
+//? Using Bitwise XOR
+//* The XOR method is safe for integers and avoids overflow.
+
+// let a = 5;
+// let b = 10;
+
+// console.log(`Before Swap: a = ${a}, b = ${b}`);
+
+// // Swap using XOR
+// a = a ^ b; // a becomes 15 (binary XOR of 5 and 10)
+// b = a ^ b; // b becomes 5 (original value of a)
+// a = a ^ b; // a becomes 10 (original value of b)
+
+// console.log(`After Swap: a = ${a}, b = ${b}`);
 
 
 
