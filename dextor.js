@@ -1346,7 +1346,7 @@ NaN                                                                             
 //             if(temp == n[j]){
 //                 console.log(temp);
 //             }
-        
+
 //         }
         
 //     }
