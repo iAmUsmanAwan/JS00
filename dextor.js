@@ -1296,6 +1296,32 @@ NaN                                                                             
 // console.log(a);
 
 
+//TODO: Encapsulation in JavaScript:
+
+// function createCounter() {
+//     let count = 0; //? count is a private variable, accessible only within the createCounter function.
+//         return {
+//         increment() {
+//                 count++;
+//                 },
+//         decrement() {
+//                 count--;
+//                 },
+//         getCount() {
+//                 return count;
+//         },
+//         };
+
+//         //* The createCounter function encapsulates the count variable and the functions increment, decrement, and getCount. The count variable is private and can only be accessed or modified through the functions returned by createCounter.
+// }
+
+// const counter = createCounter();
+// counter.increment();
+// console.log(counter.getCount()); //? Output: 1
+// counter.decrement();
+// console.log(counter.getCount()); //? Output: 0
+
+
 // FIXME:
 //* Fibonacci sequence
 //* ⚪🟢🔵
