@@ -471,6 +471,23 @@ NaN                                                                             
 // var users =  ["Ted" , "Tim" , "Tony" , "Sam" , "Sad" , "Sod"];
 // console.log(users.slice(1, 4));
 
+//! Another example of slice:
+
+// const array = ['red', 88, 'green', 'blue'];
+// const indexToReplace = 1;
+// const newValue = 'grey';
+
+// // Replace the value at index 1
+// const newArray = [
+//   ...array.slice(0, indexToReplace), // Elements before the index
+//   newValue,                         // New value to insert
+//   ...array.slice(indexToReplace + 1) // Elements after the index
+// ];
+
+// console.log(array);     // Original array remains unchanged
+// console.log(newArray);  // New array with replaced value
+
+
 // TODO: Splice conxept in array:
 // * here second value is how much to count from the position mentioned
 
@@ -904,15 +921,16 @@ NaN                                                                             
 //! example for objects
 
 // const myUser = {
-//     name: "Jack",
-//     lastName: "Sparrow",
-//     role: "Captain",
-//     shipName: "Black Pearl",
+//         name: "Jack",
+//         lastName: "Sparrow",
+//         role: "Captain",
+//         shipName: "Black Pearl",
 // }
 // console.log(myUser.role);
 
 // const {name, lastName, role, shipName} = myUser; // this is destructuring, it is assigning the values of myUser object to name, lastName, role and shipName //? the name of the variables should be same as the properties in the object
-// console.log(shipName);
+// console.log(shipName);  
+// console.log(myUser);
 
 
 // TODO: Spread and REST operators in JavaScript:
@@ -926,32 +944,35 @@ NaN                                                                             
 // console.log(myObj);
 
 //! spread operator
+
 // function addTwoNumbers(a, b) 
 // {
-//     return a + b;
+//         return a + b;
 // }
 // console.log(addTwoNumbers(3, 5));
 
-// var numbers = [6, 3];
+// var numbers = [6, 3];   //? this array should be the lenght of the arguments passed to the function
 // console.log(addTwoNumbers(...numbers)); // spread operator is used to pass an array as arguments. This is an example of spread operator. //? The spread operator is used to expand elements of an array or properties of an object into individual arguments.
 
 //! rest operator
+
 // function addMultipleNumbers(...args) // args is an array of all the arguments passed to the function
 // {
 //     console.log(args); // this will print all the arguments passed to the function as an array. This is an example of rest operator. //? The rest operator is used to capture all the remaining arguments into an array.
 
-//     let sum = 0;
-//     for (const iterator of args) 
-//         {
-//             // sum = sum + iterator;
-//             sum += iterator;   // or this is also valid
-//         }
-//     return sum;
+//         let sum = 0;
+//         for (const iterator of args) 
+//                 {
+//                 // sum = sum + iterator;
+//                 sum += iterator;   // or this is also valid
+//                 }
+//         return sum;
 // } 
 
-// console.log(addMultipleNumbers(2, 5, 8, 10));
+// console.log(addMultipleNumbers(2, 5, 8, 10, 11));
 
 //! another example of rest operator
+
 // function addMultipleNumbers(a, b, ...args) // this will treat first two arguments seperately as a and b and the rest of the arguments as an array.
 // {
 //     console.log(args);    // This is an example of rest operator. //? this will print all the arguments passed to the function as an array except a and b. 
@@ -1027,6 +1048,17 @@ NaN                                                                             
 // };
 
 // callMe();
+
+
+//! Async JavaScript:
+
+// console.log("Start");
+
+// setTimeout(() => {
+//         console.log("Inside setTimeout");
+// }, 0); //? this will be exucuted after the console.log("End") because it is a part of the event loop, synchronous code is executed first and then the asynchronous code is executed. There is also priority in the asynchronous code, fetch API has the highest priority, then the promises, then the setTimeout() function.
+
+// console.log("End");
 
 
 // TODO: Promise .any()  and  .race() example:
@@ -1171,7 +1203,7 @@ NaN                                                                             
 // })
 
 
-//! Map
+//! Map() of Array:  
 //* Purpose: Iterates through each element of the array, applies a transformation via a callback function, and returns a new array containing the results.
 //* Returns: A new array with the transformed elements.
 //* Use Case: When you want to create a new array by transforming the elements of an existing array.
@@ -1296,6 +1328,16 @@ NaN                                                                             
 // console.log(a);
 
 
+// TODO: Hoisting in JavaScript:
+//* Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. This means that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local.
+
+// function testHoisting() {
+//         console.log(x); //? Output: undefined
+//         var x = 100;   // but if we use let instead of var, it will give an error, because let does not allow hoisting and it will not be able to find x
+//         console.log(x); //? Output: 100
+//         }
+
+
 //TODO: Encapsulation in JavaScript:
 
 // function createCounter() {
@@ -1406,6 +1448,24 @@ NaN                                                                             
 // }
 
 // console.log(multiply(2)(3)(4)()); // Output: 24
+
+
+//! Partial Application:
+//? Partial application is a technique where a function with multiple parameters is broken down into a series of functions that each take a subset of the parameters. This technique is used to fix a number of arguments to a function, producing a new function with fewer parameters.
+
+// function add(a){
+//         return function(b, c){    //* In Currying function, we can pass the arguments in multiple steps, for this scenerio, there will be three functions which takes three arguments each
+//                 return a + b + c;
+//         }
+// }
+// const x = add(1);
+// console.log(x(2, 3));  //? 6
+
+// //* or this can also be written as
+
+// const y = add(1)(2, 3);  //? 6
+// console.log(y);
+
 
 
 // FIXME:
@@ -1592,6 +1652,120 @@ NaN                                                                             
 // a = a ^ b; // a becomes 10 (original value of b)
 
 // console.log(`After Swap: a = ${a}, b = ${b}`);
+
+
+// FIXME: 
+//* Implementation of a Singly Linked List in JavaScript:
+
+// class Node {
+//         constructor(value) {
+//         this.value = value;
+//         this.next = null; // Pointer to the next node
+//         }
+// }
+
+// class LinkedList {
+//         constructor() {
+//         this.head = null; // Start of the list
+//         this.size = 0;    // Keep track of the size
+//         }
+
+//         // Add a node to the end of the list
+//         append(value) {
+//         const newNode = new Node(value);
+//         if (this.head === null) {
+//         this.head = newNode;
+//         } else {
+//         let current = this.head;
+//         while (current.next) {
+//         current = current.next;
+//         }
+//         current.next = newNode;
+//         }
+//         this.size++;
+//         }
+
+//         // Add a node at the start of the list
+//         prepend(value) {
+//         const newNode = new Node(value);
+//         newNode.next = this.head;
+//         this.head = newNode;
+//         this.size++;
+//         }
+
+//         // Remove a node by value
+//         remove(value) {
+//         if (!this.head) return null;
+
+//         if (this.head.value === value) {
+//         this.head = this.head.next;
+//         this.size--;
+//         return;
+//         }
+
+//         let current = this.head;
+//         let previous = null;
+
+//         while (current && current.value !== value) {
+//         previous = current;
+//         current = current.next;
+//         }
+
+//         if (current) {
+//         previous.next = current.next;
+//         this.size--;
+//         }
+//         }
+
+//         // Print the list
+//         print() {
+//         let current = this.head;
+//         let result = '';
+//         while (current) {
+//         result += `${current.value} -> `;
+//         current = current.next;
+//         }
+//         console.log(result + 'null');
+//         }
+
+//         // Get the size of the list
+//         getSize() {
+//         return this.size;
+//         }
+// }
+
+// // Example usage
+// const list = new LinkedList();
+// list.append(10);
+// list.append(20);
+// list.prepend(5);
+// list.print(); // Output: 5 -> 10 -> 20 -> null
+// list.remove(10);
+// list.print(); // Output: 5 -> 20 -> null
+
+
+// FIXME:
+//* detect if a number is prime
+
+// function isPrime(n) {
+//         if (n < 2) return false; // Numbers less than 2 are not prime.
+        
+//         for (let i = 2; i <= Math.sqrt(n); i++) {
+//         if (n % i === 0) {
+//         return false; // Divisible by i, not a prime number.
+//         }
+//         }
+        
+//         return true; // Passed all checks, it's prime.
+// }
+
+// // Examples
+// console.log(isPrime(2));  // true
+// console.log(isPrime(11)); // true
+// console.log(isPrime(15)); // false
+// console.log(isPrime(1));  // false
+
+
 
 
 
