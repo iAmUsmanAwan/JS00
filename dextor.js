@@ -1595,21 +1595,21 @@ NaN                                                                             
 // FIXME:
 //! Seperate positive and negetive  numbers from a array: 
 
-function separateNumbers(array) {
-        let positiveNumbers = [];
-        let negativeNumbers = [];
+// function separateNumbers(array) {
+//         let positiveNumbers = [];
+//         let negativeNumbers = [];
         
-        for (let i = 0; i < array.length; i++) {
-        if (array[i] >= 0) {
-                        positiveNumbers.push(array[i]);
-                } else {
-                        negativeNumbers.push(array[i]);
-                        }
-        }
+//         for (let i = 0; i < array.length; i++) {
+//         if (array[i] >= 0) {
+//                         positiveNumbers.push(array[i]);
+//                 } else {
+//                         negativeNumbers.push(array[i]);
+//                         }
+//         }
         
-        return { positiveNumbers, negativeNumbers };    // Return statement should be carefully used outside the loop
-        //* Return both arrays as an object, coz JavaScript does not support returning multiple values directly.
-        }
+//         return { positiveNumbers, negativeNumbers };    // Return statement should be carefully used outside the loop
+//         //* Return both arrays as an object, coz JavaScript does not support returning multiple values directly.
+//         }
 
 // //? Example usage:
 // let numbers = [3, -1, 0, 5, -9, -2, 8];
