@@ -423,34 +423,34 @@ NaN                                                                             
 // console.log(fruits[1]);
 // console.log(fruits.length);
 
-// TODO: Make a new array from a array by breaking it: 
+//! Make a new array from a array by breaking it: 
 
 // console.log(Array.from("Aladeen"));
 
-// TODO: Find the index of element in array:      
+//! Find the index of element in array:      
 
 // console.log(fruits.indexOf("Pineapple"));
 // console.log(fruits.indexOf("Aeroplane"));
 
-// TODO: Replace element in a array:
+//! Replace element in a array:
 
 // fruits[2] = "Grapes";
 // console.log(fruits);
 
-// TODO: Deleting last element in array:  
+//! Deleting last element in array:  
 
 // fruits.pop(); 
 // fruits.pop(); 
 // console.log(fruits);
 
-// TODO: Adding and Deleting first element in array:  
+//! Adding and Deleting first element in array:  
 
 // fruits.unshift("Avacado");      // not recommended
 // console.log(fruits);
 // fruits.shift();
 // console.log(fruits);
 
-// TODO: Fill conxept in array:   
+//! Fill conxept in array:   
 
 // var myArray = [1, 3, 5, 6, 7, 2, 9, 8];
 // console.log(myArray.fill(88));
@@ -460,13 +460,13 @@ NaN                                                                             
 
 // * the start range is inclusive and end range is exclusive
 
-// TODO: Filter conxept in array:
+//! Filter conxept in array:
 
 // var numberArray = [ 11, 22, 33, 44, 55, 66, 77, 88, 99 ];
 // var resultArray = numberArray.filter( (numb) => (numb < 55) ) ;
 // console.log(resultArray);
 
-// TODO: Slice conxept in array:
+//! Slice conxept in array:
 
 // var users =  ["Ted" , "Tim" , "Tony" , "Sam" , "Sad" , "Sod"];
 // console.log(users.slice(1, 4));
@@ -488,7 +488,7 @@ NaN                                                                             
 // console.log(newArray);  // New array with replaced value
 
 
-// TODO: Splice conxept in array:
+//! Splice conxept in array:
 // * here second value is how much to count from the position mentioned
 
 // users.splice(1, 3 , "HI"); // here 1 is the starting point and 3 is the range
@@ -1595,21 +1595,21 @@ NaN                                                                             
 // FIXME:
 //! Seperate positive and negetive  numbers from a array: 
 
-// function separateNumbers(array) {
-//                 let positiveNumbers = [];
-//                 let negativeNumbers = [];
-                
-//                 for (let i = 0; i < array.length; i++) {
-//                 if (array[i] >= 0) {
-//                         positiveNumbers.push(array[i]);
-//                 } else {
-//                         negativeNumbers.push(array[i]);
-//                 }
-//                 }
-                
-//                 return { positiveNumbers, negativeNumbers };    // Return statement should be carefully used outside the loop
-//                 //* Return both arrays as an object, coz JavaScript does not support returning multiple values directly.
-//         }
+function separateNumbers(array) {
+        let positiveNumbers = [];
+        let negativeNumbers = [];
+        
+        for (let i = 0; i < array.length; i++) {
+        if (array[i] >= 0) {
+                        positiveNumbers.push(array[i]);
+                } else {
+                        negativeNumbers.push(array[i]);
+                        }
+        }
+        
+        return { positiveNumbers, negativeNumbers };    // Return statement should be carefully used outside the loop
+        //* Return both arrays as an object, coz JavaScript does not support returning multiple values directly.
+        }
 
 // //? Example usage:
 // let numbers = [3, -1, 0, 5, -9, -2, 8];
