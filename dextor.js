@@ -515,6 +515,19 @@ NaN                                                                             
 // console.table(user);     // or more sophisticated way
 
 
+//! Interview Question:
+
+// const a={};
+// const b={ key: "b" };
+// const c={ key: "c" };
+
+// a[b]=123;
+// a[c]=456;
+
+// // console.log(a);  //? it will print { '[object Object]': 456 } because the key is converted to string
+// console.log(a[b]);  // 456 after overwriting the previous value 
+
+
 //TODO: Object conxept with funtions:
 
 // var user = {
@@ -768,6 +781,29 @@ NaN                                                                             
 // console.log(add5(5)); // this add5 is now passed x value
 
 // console.log(doAdd(3)(4));  // function can also be called like this 
+
+//?! third example
+
+// let view;
+// function likeTheVideo() {
+//         let called = 0;
+        
+//         return function() {
+//                 if (called > 0) {
+//                         console.log( "Already Subscribed 👍");
+//                 } else {
+//                         view = "Dictator";
+//                         console.log("Subscribed 👍");
+//                         called++;
+//                 }
+//         };
+// }
+
+// const subscribe = likeTheVideo(); // Store the returned function
+
+// subscribe(); // Subscribed 👍
+// subscribe(); // Already Subscribed 👍
+// subscribe(); // Already Subscribed 👍
 
 
 // TODO: Bind and call concept in closure:    
