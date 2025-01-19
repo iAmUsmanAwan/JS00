@@ -1374,6 +1374,19 @@ NaN                                                                             
 //         }
 
 
+// TODO: Null Coalescing in JavaScript:
+//* Null Coalescing in JavaScript refers to using the nullish coalescing operator (??) to handle null and undefined values. It provides a concise way to assign a default value when an expression evaluates to null or undefined.
+
+// function value(marks){
+//         const valueStorer = marks ?? "nahi aayi";
+//         console.log(`value ${valueStorer}`);
+// }
+// value(10); //? Output: value 10
+// value(50); //? Output: value 50
+// value(0); //? depending on the operator used, the valueStorer variable will be assigned the value 
+//! here zero will be treated as falsy value and will print the alternate value for the valueStorer variable, if the || operator is used.
+
+
 //TODO: Encapsulation in JavaScript:
 
 // function createCounter() {
