@@ -969,6 +969,20 @@ NaN                                                                             
 // console.log(myUser);
 
 
+// TODO: Stringify the Object in JavaScript:
+
+// const settings = {
+//         username: "Jack Sparrow",
+//         level: 10,
+//         health: 100,
+// };
+
+// const jsonSettings = JSON.stringify(settings); //? this will convert the object into a JSON string
+// const SelectiveJsonSettings = JSON.stringify(settings, ["level", "health"]); //? this will only convert the {level and health} of object into a JSON string
+// console.log(jsonSettings);
+// console.log(SelectiveJsonSettings);
+
+
 // TODO: Spread and REST operators in JavaScript:
 
 // var returnMaxValue = Math.max(2,3,4,5,6,7,8,9,10);
