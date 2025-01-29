@@ -1,4 +1,4 @@
-// TODO: Implement this in the Inspect section of the browser console as this will not work in Node.js environment
+// TODO: Implement this in the Inspect section of the browser console but this will also work in Node.js environment
 
 fetch(`https://api.chucknorris.io/jokes/random`)
 .then((responseGot) => {  //? if the response is ok (status 200)
