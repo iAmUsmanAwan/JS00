@@ -496,6 +496,12 @@ NaN                                                                             
 // users.splice(1, 2 , "HI", "BYE");  // here starting from position 1 and starting from 1 count 2 and replace them with "HI", "BYE"
 // console.log(users);
 
+//! Split conxept in array:
+
+// const x = "he".split(",");
+// const y = ['h', 'e'];
+// console.log(x==y);   //? this will give false because, When we use == to compare two arrays, JavaScript checks if they reference the same object in memory, not if their contents are the same.
+
 
 //TODO: Object conxept:
 // * values are stored in key value pair format
@@ -513,6 +519,14 @@ NaN                                                                             
 // console.log(user.loginCount);
 // console.log(user);
 // console.table(user);     // or more sophisticated way
+
+
+//! Object Shorthand Assignment to log variables along with their names
+
+// const a = 123;
+// const b = 'hello';
+// console.log(`a=${a} b=${b}`);    // like this or below
+// console.log({a, b});    // like this as an object 
 
 
 //! Interview Question:
@@ -1039,6 +1053,14 @@ NaN                                                                             
 
 // console.log(addMultipleNumbers(2, 5, 1, 1));
 
+//! Interview Question:
+
+// function getItems(fruitList, favoriteFruit,  ...args){   //? A rest parameter must be last in a parameter list.
+//         return [...fruitList, ...args, favoriteFruit];    //? unlike rest operator, spread operator can be used anywhere in the array
+// }
+
+// getItems(["Apple", "Banana"], "Orange", "Peach");
+
 
 // TODO: Event loop: 
 
@@ -1234,6 +1256,8 @@ NaN                                                                             
 // console.log(![] + []);   //? "false"
 // console.log(true + []);  //? "true"
 
+// console.log(1 + 2 + "3"); //? "33"    // because the first two numbers are added together, and then the result is concatenated with the string "3", {left to right precedence}
+// console.log("1" + 2 + 3); //? "123"    // because the first number is concatenated with the number 2, and then the result is concatenated with the number 3, {left to right precedence}
 
 //! ForEach
 //* Purpose: Iterates through each element of the array and executes a callback function for each element.
@@ -1244,12 +1268,21 @@ NaN                                                                             
 // arr.forEach(num => console.log(num * 2)); //? Logs: 2, 4, 6
 // console.log(arr); //? [1, 2, 3] - Original array remains unchanged
 
-//* Another Example
+//! Another Example
 
 // let a = [1, 2, 3, 4];
 // a.forEach((num)=> {
 //     num++;
 //     console.log(num);
+// })
+
+
+//! Another Example
+
+// const x = [];
+// x[4] = 1;    //? here 1 is assigned to the 4th index of the array x, and all the unassigned indexes will be undefined.
+// x.forEach((i)=> {    //? forEach() method calls a function once for each element in an array, in order. But it will only iterate over the (defined values) assigned indexes of the array. 
+//         console.log("Hi");    //* this will be printed only once, because there is only one defined index in the array.
 // })
 
 
