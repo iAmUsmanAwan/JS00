@@ -1,9 +1,9 @@
-## Run Locally
+## How to run Locally?
 
 Clone the project
 
 ```bash
-  git clone https://github.com/iAmUsmanAwan/CSharp-Dotnet_progress-tracker.git
+  git clone https://github.com/iAmUsmanAwan/JS00.git
 ```
 
 Go to the project directory
