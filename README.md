@@ -26,4 +26,5 @@ This repository is a part of my JavaScript learning journey, where I experiment 
 
 If you find this helpful or interesting, don't forget to:
 ## ⭐ Star this repo to support my journey!
-## 👨‍💻 Follow me on GitHub for more exciting projects: @iAmUsmanAwan
+## 👨‍💻 Follow me on GitHub for more exciting projects: [@iAmUsmanAwan](https://github.com/iAmUsmanAwan)
+
