@@ -18,4 +18,4 @@ fetch(`https://api.chucknorris.io/jokes/random`)
 
 .catch((error)=>{
     console.error("❌ Error occurred while fetching the joke: ", error);
-})  //? if any error occurred during the fetch request
+})   //? if any error occurred during the fetch request
