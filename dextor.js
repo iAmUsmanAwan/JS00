@@ -1843,17 +1843,17 @@ NaN                                                                             
 // FIXME:
 //* detect if a number is prime
 
-// function isPrime(n) {
-//         if (n < 2) return false; // Numbers less than 2 are not prime.
+// function isPrime(n) { 
+//         if (n < 2) return false; // Numbers less than 2 are not prime. 
 
-//         for (let i = 2; i <= Math.sqrt(n); i++) {
-//         if (n % i === 0) {
-//         return false; // Divisible by i, not a prime number.
-//         }
-//         }
+//         for (let i = 2; i <= Math.sqrt(n); i++) { 
+//         if (n % i === 0) { 
+//         return false; // Divisible by i, not a prime number. 
+//         } 
+//         } 
 
-//         return true; // Passed all checks, it's prime.
-// }
+//         return true; // Passed all checks, it's prime. 
+// } 
 
 // // Examples
 // console.log(isPrime(2));  // true
