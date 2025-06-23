@@ -1460,6 +1460,27 @@ NaN                                                                             
 // console.log(counter.getCount()); //? Output: 0
 
 
+//TODO: Factory Functions in JavaScript:
+//* Factory functions is a design pattern that return new objects. They allow you to create multiple instances of an object with the same structure but different values. Factory functions are useful for creating objects without using the `new` keyword or constructor functions.  {Object creation logic is encapsulated in a function.}
+
+// function createPirate(name, ship) {
+//         return {
+//                 name: name,
+//                 ship: ship,
+//                 sail() {
+//                         console.log(`${this.name} is sailing on the ${this.ship}.`);
+//                 },
+//         };
+// }
+
+// const pirate1 = createPirate("Jack Sparrow", "Black Pearl");
+// const pirate2 = createPirate("Hector Barbossa", "Queen Anne's Revenge");
+
+// pirate1.sail(); // Output: Jack Sparrow is sailing on the Black Pearl.
+// pirate2.sail(); // Output: Hector Barbossa is sailing on the Queen Anne's
+
+
+
 // FIXME:
 //* Fibonacci sequence
 //* ⚪🟢🔵
