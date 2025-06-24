@@ -301,7 +301,7 @@ NaN                                                                             
 // console.log(result);
 
 
-// TODO: Arrow function:
+// TODO: Arrow Function vs Normal Function:
 
 // var result = [2, 4, 6, 8].every((e) => {
 //         return e % 2 === 0;
@@ -333,13 +333,22 @@ NaN                                                                             
 //! Fourth example which shows how regular functions handle this keyword: 
 //? gives an error in strict mode because it tries to access a non-existent property of the global object (this)
 
-// function Person() {
-//     this.age = 0;
+// global.age = 22; // Simulating a global variable for demonstration, when we use this keyword in a regular function, it refers to the global object (window.age in browser, global in Node.js) so we have to remove this keyword to avoid error in strict mode
 
-//     setInterval(function() {
-//         this.age++; // `this` here refers to the global object, not Person
-//         console.log(this.age);  // NaN or unexpected behavior in strict mode
-//     }, 1000);
+// function Person() {
+//   this.age = 11; // Instance property
+
+//   //* Regular function (broken `this`)
+//   setInterval(function() {
+//     this.age++; // `this` refers to the global object (or `undefined` in strict mode)
+//     console.log("Regular function:", this.age); // NaN (global.age is undefined in strict mode)
+//   }, 1000);
+
+//   // Arrow function (fixed `this`)
+//   setInterval(() => {
+//     this.age++; // `this` refers to the `Person` instance (lexical scope)
+//     console.log("Arrow function:", this.age); // 12, 13, 14...
+//   }, 1000);
 // }
 
 // const p = new Person();
@@ -347,10 +356,10 @@ NaN                                                                             
 //! Fifth example which shows how arrow functions handle this keyword:
 
 // function Person() {
-//     this.age = 0;
+//     this.age = 10;
 
 //     const intervalId = setInterval(() => {
-//         if (this.age < 30) {         // Condition: Only increment if age is less than 10
+//         if (this.age < 20) {         // Condition: Only increment if age is less than 10
 //             this.age++;
 //             console.log(this.age);
 //         } else {
