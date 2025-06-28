@@ -829,7 +829,7 @@ NaN                                                                             
 // subscribe(); // Already Subscribed 👍
 
 
-// TODO: Bind and call concept in closure:    
+// TODO: Bind and call concept in closure:     
 //? in order to use a function of some other object with same properties bind or call is used
 
 // var firstPirate = {
