@@ -1296,7 +1296,7 @@ NaN                                                                             
 
 
 //! Map() of Array:  
-//* Purpose: Iterates through each element of the array, applies a transformation via a callback function, and returns a new array containing the results.
+//* Purpose: Iterates through each element of the array, applies a transformation via a callback function, and returns a new array containing the results. 
 //* Returns: A new array with the transformed elements.
 //* Use Case: When you want to create a new array by transforming the elements of an existing array.
 
